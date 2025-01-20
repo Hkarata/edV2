@@ -65,7 +65,7 @@ public class GetUserDataFromNidaEndpoint(ILogger<GetUserDataFromNidaEndpoint> lo
         {
             // Log unexpected errors for debugging purposes.
             logger.LogError(ex, "Error occurred while retrieving user data from NIDA.");
-            throw;
+            return TypedResults.NoContent();
         }
     }
 }

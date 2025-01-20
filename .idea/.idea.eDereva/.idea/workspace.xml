@@ -8,58 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/OnBoarding/CheckIfUserExistsEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/OnBoarding/GetUserDataFromNidaEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AddLicenseClassEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AddSingleLicenseClassEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/CreateUserEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/GetUserLicenseClassesEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/RemoveSingleLicenseClassEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Extensions/ApiKeySecuritySchemeTransformer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Extensions/BearerSecuritySchemeTransformer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/ServiceRegistrar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/eDereva.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/eDereva.Api.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Context/DatabaseContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/ILicenseClassRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Services/INidaService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Services/IPasswordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/eDereva.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/AddSingleLicenseClassRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/CreateUserRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/UserCheckRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/LicenseClassInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/NidaUserDataResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/DataProtection/DataTaxonomy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/DataProtection/RequestParameterDecryption.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/DataProtection/StarRedactor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Loggers/UserLogger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/LicenseQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/UserQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/eDereva.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/LicenseClassRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Services/NidaService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Services/PasswordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/eDereva.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.sln" afterDir="false" />
-    </list>
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Reformat and Code Cleanup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,8 +171,25 @@
       <workItem from="1737362111592" duration="5500000" />
       <workItem from="1737368275012" duration="1517000" />
       <workItem from="1737370007591" duration="6866000" />
-      <workItem from="1737397934062" duration="10887000" />
+      <workItem from="1737397934062" duration="11190000" />
     </task>
+    <task id="LOCAL-00001" summary="Heavy Commit 1">
+      <option name="closed" value="true" />
+      <created>1737409044140</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737409044140</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Reformat and Code Cleanup">
+      <option name="closed" value="true" />
+      <created>1737409123803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737409123803</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +197,21 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Heavy Commit 1" />
+    <MESSAGE value="Reformat and Code Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat and Code Cleanup" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 using eDereva.Application.Repositories;
 using eDereva.Domain.Contracts.Requests;
+using eDereva.Domain.Loggers;
 using FastEndpoints;
 using Microsoft.AspNetCore.Http.HttpResults;
 
@@ -28,10 +29,14 @@ public class CreateUserEndpoint(IUserRepository userRepository, ILogger<CreateUs
     public override async Task<Results<Created, BadRequest<string>>> ExecuteAsync(CreateUserRequest req,
         CancellationToken ct)
     {
+        // Log the incoming request data
+        logger.LogInformation("Received request to create user with email: {Email}.", req.Email);
+        
         try
         {
             await userRepository.CreateUser(req, ct);
-
+            
+            logger.LogUserCreated(req);
             return TypedResults.Created();
         }
         catch (Exception ex)

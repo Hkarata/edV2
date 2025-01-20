@@ -32,7 +32,8 @@ public class CheckIfUserExistsEndpoint(IUserRepository userRepository, ILogger<C
 
         var result = await userRepository.CheckIfUserExists(req.Nin, req.Email, req.Phone, ct);
 
-        if (result) return TypedResults.Ok();
+        if (result) 
+            return TypedResults.Ok();
 
         return TypedResults.NoContent();
     }
