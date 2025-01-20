@@ -1,0 +1,18 @@
+﻿services:
+  edereva.api:
+    image: edereva.api
+    build:
+      context: .
+      dockerfile: eDereva.Api/Dockerfile
+
+  edereva.api-1:
+    image: edereva.api-1
+    build:
+      context: .
+      dockerfile: eDereva.Api/Dockerfile
+
+  edereva.api-2:
+    image: edereva.api-2
+    build:
+      context: .
+      dockerfile: eDereva.Api/Dockerfile

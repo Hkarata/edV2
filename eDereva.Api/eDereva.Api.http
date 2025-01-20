@@ -1,0 +1,6 @@
+@eDereva.Api_HostAddress = http://localhost:5282
+
+GET {{eDereva.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
