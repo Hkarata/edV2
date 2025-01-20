@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.User;
 
-public class GetUserLicenseClassesEndpoint (ILicenseClassRepository licenseClassRepository, ILogger<GetUserLicenseClassesEndpoint> logger)
+public class GetUserLicenseClassesEndpoint(
+    ILicenseClassRepository licenseClassRepository,
+    ILogger<GetUserLicenseClassesEndpoint> logger)
     : EndpointWithoutRequest<Results<Ok<List<LicenseClassInfo>>, NoContent>>
 {
     public override void Configure()
@@ -31,13 +33,9 @@ public class GetUserLicenseClassesEndpoint (ILicenseClassRepository licenseClass
             var response = await licenseClassRepository.GetUserLicensesAsync(userId, ct);
 
             if (response.Count == 0)
-            {
                 logger.LogWarning("No license classes found for UserId: {UserId}", userId);
-            }
             else
-            {
                 logger.LogInformation("{Count} license classes found for UserId: {UserId}", response.Count, userId);
-            }
 
             return TypedResults.Ok(response);
         }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.OnBoarding;
 
-public class CheckIfUserExistsEndpoint (IUserRepository userRepository, ILogger<CheckIfUserExistsEndpoint> logger)
+public class CheckIfUserExistsEndpoint(IUserRepository userRepository, ILogger<CheckIfUserExistsEndpoint> logger)
     : Endpoint<UserCheckRequest, Results<Ok, NoContent>>
 {
     public override void Configure()
@@ -29,13 +29,10 @@ public class CheckIfUserExistsEndpoint (IUserRepository userRepository, ILogger<
     public override async Task<Results<Ok, NoContent>> ExecuteAsync(UserCheckRequest req, CancellationToken ct)
     {
         logger.LogCheckingIfUserExists(req);
-        
+
         var result = await userRepository.CheckIfUserExists(req.Nin, req.Email, req.Phone, ct);
 
-        if (result)
-        {
-            return TypedResults.Ok();
-        }
+        if (result) return TypedResults.Ok();
 
         return TypedResults.NoContent();
     }

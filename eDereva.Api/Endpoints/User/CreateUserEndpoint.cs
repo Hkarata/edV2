@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.User;
 
-public class CreateUserEndpoint (IUserRepository userRepository, ILogger<CreateUserEndpoint> logger)
+public class CreateUserEndpoint(IUserRepository userRepository, ILogger<CreateUserEndpoint> logger)
     : Endpoint<CreateUserRequest, Results<Created, BadRequest<string>>>
 {
     public override void Configure()
@@ -25,7 +25,8 @@ public class CreateUserEndpoint (IUserRepository userRepository, ILogger<CreateU
         );
     }
 
-    public override async Task<Results<Created, BadRequest<string>>> ExecuteAsync(CreateUserRequest req, CancellationToken ct)
+    public override async Task<Results<Created, BadRequest<string>>> ExecuteAsync(CreateUserRequest req,
+        CancellationToken ct)
     {
         try
         {

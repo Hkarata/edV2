@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace eDereva.Infrastructure.Services;
 
-
 public class PasswordService : IPasswordService
 {
     private const int IterCount = 100_000;

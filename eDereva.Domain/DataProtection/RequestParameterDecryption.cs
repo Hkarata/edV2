@@ -13,17 +13,17 @@ public static class RequestParameterDecryption
         {
             // Convert URL-safe Base64 back to standard Base64
             encryptedBase64 = encryptedBase64.Replace('_', '/').Replace('-', '+');
-            
+
             var secretKey = SecretKey.PadRight(32, '*');
             var combinedBytes = Convert.FromBase64String(encryptedBase64);
-            
+
             var iv = new byte[16];
             var encryptedData = new byte[combinedBytes.Length - 16];
-            
+
             Array.Copy(combinedBytes, 0, iv, 0, 16);
             Array.Copy(combinedBytes, 16, encryptedData, 0, encryptedData.Length);
 
-            using Aes aes = Aes.Create();
+            using var aes = Aes.Create();
             aes.Key = Encoding.UTF8.GetBytes(secretKey);
             aes.IV = iv;
             aes.Mode = CipherMode.CBC;

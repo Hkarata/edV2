@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.User;
 
-public class AddSingleLicenseClassEndpoint (ILicenseClassRepository licenseClassRepository, ILogger<AddSingleLicenseClassEndpoint> logger)
+public class AddSingleLicenseClassEndpoint(
+    ILicenseClassRepository licenseClassRepository,
+    ILogger<AddSingleLicenseClassEndpoint> logger)
     : Endpoint<AddSingleLicenseClassRequest, Results<Created, Conflict<string>>>
 {
     public override void Configure()
@@ -21,15 +23,17 @@ public class AddSingleLicenseClassEndpoint (ILicenseClassRepository licenseClass
     }
 
 
-    public override async Task<Results<Created, Conflict<string>>> ExecuteAsync(AddSingleLicenseClassRequest req, CancellationToken ct)
+    public override async Task<Results<Created, Conflict<string>>> ExecuteAsync(AddSingleLicenseClassRequest req,
+        CancellationToken ct)
     {
         var userId = Route<Guid>("userId");
 
         try
         {
-            logger.LogInformation("Processing request to add license class {LicenseClassId} for user {UserId}.", req, userId);
+            logger.LogInformation("Processing request to add license class {LicenseClassId} for user {UserId}.", req,
+                userId);
             await licenseClassRepository.AddLicenseClassAsync(userId, req.LicenseClassId, ct);
-            
+
             logger.LogInformation("Successfully added license class {LicenseClassId} for user {UserId}.", req, userId);
             return TypedResults.Created();
         }

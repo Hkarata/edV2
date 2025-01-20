@@ -31,7 +31,4 @@ public static class LicenseQueries
                     WHERE UserID = @UserID 
                     AND LicenseClassID = @LicenseClassID
         """;
-
-
-
 }

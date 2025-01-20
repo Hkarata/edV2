@@ -1,11 +1,12 @@
 using eDereva.Application.Repositories;
-using eDereva.Domain.DataProtection;
 using FastEndpoints;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.User;
 
-public class AddLicenseClassEndpoint (ILicenseClassRepository licenseClassRepository, ILogger<AddLicenseClassEndpoint> logger) 
+public class AddLicenseClassEndpoint(
+    ILicenseClassRepository licenseClassRepository,
+    ILogger<AddLicenseClassEndpoint> logger)
     : Endpoint<List<short>, Results<Created, BadRequest<string>>>
 {
     public override void Configure()
@@ -24,7 +25,7 @@ public class AddLicenseClassEndpoint (ILicenseClassRepository licenseClassReposi
     {
         var userId = Route<Guid>("userId");
         logger.LogInformation("Starting to add license classes for UserId: {UserId}", userId);
-        
+
         try
         {
             logger.LogInformation("License Class IDs to be added: {LicenseClasses}", string.Join(",", req));

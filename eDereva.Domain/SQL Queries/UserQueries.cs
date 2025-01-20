@@ -10,7 +10,7 @@ public static class UserQueries
                OR (@Email IS NULL OR LowerEmail = LOWER(@Email))
                OR (@PhoneNumber IS NULL OR LowerPhoneNumber = LOWER(@PhoneNumber));
         """;
-    
+
     public static string InsertUser =>
         """
             BEGIN

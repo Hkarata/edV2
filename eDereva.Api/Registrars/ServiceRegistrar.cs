@@ -8,7 +8,7 @@ public static class ServiceRegistrar
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddSingleton<INidaService, NidaService>();
-        
+
         services.AddSingleton<IPasswordService, PasswordService>();
 
         return services;

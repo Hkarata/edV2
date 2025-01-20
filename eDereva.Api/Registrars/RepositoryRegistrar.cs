@@ -10,7 +10,7 @@ public static class RepositoryRegistrar
         services.AddScoped<IUserRepository, UserRepository>();
 
         services.AddScoped<ILicenseClassRepository, LicenseClassRepository>();
-        
+
         return services;
     }
 }
