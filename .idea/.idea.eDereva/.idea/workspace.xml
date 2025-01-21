@@ -8,29 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AuthenticationEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IRoleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Services/ITokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/AuthenticationRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/UserDataResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Enums/PermissionFlag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/RoleQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/RoleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Services/TokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5/storage_v2/_src_/database/eDereva.5IyjWA/schema/Core.vyMgAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5/storage_v2/_src_/database/eDereva.5IyjWA/schema/Core.vyMgAA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/FilterVenuesEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/FilterVenuesEndpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Registrars/ServiceRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/ServiceRegistrar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/UserQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/UserQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" afterDir="false" />
-    </list>
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Updated Conn string" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Hkarata"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hkarata/edV2.git",
+    "accountId": "ddc17303-2a31-4134-8c29-0d13a2ce476c"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74be176084e4dacbc4d79c592c99a3a3ad110742bffc3ba0af5540cfa7dc97/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e4a77816eac0c71b8751a88658cf7f765bd2b0f957ef1fc6f2fd3817c457ed/Endpoint.cs" root0="FORCE_HIGHLIGHTING" />
@@ -198,7 +188,7 @@
       <workItem from="1737436184223" duration="6514000" />
       <workItem from="1737451485531" duration="2357000" />
       <workItem from="1737454140877" duration="5651000" />
-      <workItem from="1737464707450" duration="2161000" />
+      <workItem from="1737464707450" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -232,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737442619549</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Heavy Commit 4">
+      <option name="closed" value="true" />
+      <created>1737467501619</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737467501619</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated Conn string">
+      <option name="closed" value="true" />
+      <created>1737467606213</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737467606213</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +263,8 @@
     <MESSAGE value="Reformat and Code Cleanup" />
     <MESSAGE value="Added Logging and supplemented some logic in the endpoints" />
     <MESSAGE value="Heavy Commit 2 &amp; Reformat and Code Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heavy Commit 2 &amp; Reformat and Code Cleanup" />
+    <MESSAGE value="Heavy Commit 4" />
+    <MESSAGE value="Updated Conn string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Conn string" />
   </component>
 </project>
