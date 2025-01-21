@@ -13,6 +13,8 @@ public static class RepositoryRegistrar
 
         services.AddScoped<IVenueRepository, VenueRepository>();
 
+        services.AddScoped<IRoleRepository, RoleRepository>();
+
         return services;
     }
 }

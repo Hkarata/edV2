@@ -16551,7 +16551,7 @@
     </collation>
     <database id="5510" parent="1" name="eDereva">
       <Current>1</Current>
-      <Fingerprint>5.45672/E952F860-6749-4507-89E2-CD1D2F1D5B3D@Heris_PC\LOCALDB#A03</Fingerprint>
+      <Fingerprint>5.45672/E952F860-6749-4507-89E2-CD1D2F1D5B3D@Heris_PC\LOCALDB#561</Fingerprint>
       <Grants>5|database||1|connect|G
 5|database||0|view any column encryption key definition|G
 5|database||0|view any column master key definition|G</Grants>
@@ -16563,16 +16563,16 @@
       <ObjectId>1</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5512" parent="1" name="tempdb">
-      <ObjectId>2</ObjectId>
-      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
-    </database>
-    <database id="5513" parent="1" name="model">
+    <database id="5512" parent="1" name="model">
       <ObjectId>3</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5514" parent="1" name="msdb">
+    <database id="5513" parent="1" name="msdb">
       <ObjectId>4</ObjectId>
+      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
+    </database>
+    <database id="5514" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
     <login id="5515" parent="1" name="sa">
@@ -16768,25 +16768,21 @@
       <ObjectId>4</ObjectId>
     </role>
     <schema id="5551" parent="5510" name="Audit">
-      <IntrospectionTimestamp>2025-01-20.17:11:44.100</IntrospectionTimestamp>
       <LastIntrospectionLocalTimestamp>2025-01-20.11:11:44</LastIntrospectionLocalTimestamp>
       <ObjectId>8</ObjectId>
     </schema>
     <schema id="5552" parent="5510" name="Core">
-      <IntrospectionTimestamp>2025-01-20.17:11:44.120</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2025-01-20.11:11:44</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-21.09:55:08</LastIntrospectionLocalTimestamp>
       <ObjectId>5</ObjectId>
     </schema>
     <schema id="5553" parent="5510" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
     </schema>
     <schema id="5554" parent="5510" name="Identity">
-      <IntrospectionTimestamp>2025-01-20.17:11:44.140</IntrospectionTimestamp>
       <LastIntrospectionLocalTimestamp>2025-01-20.11:11:44</LastIntrospectionLocalTimestamp>
       <ObjectId>6</ObjectId>
     </schema>
     <schema id="5555" parent="5510" name="Locale">
-      <IntrospectionTimestamp>2025-01-20.17:11:44.157</IntrospectionTimestamp>
       <LastIntrospectionLocalTimestamp>2025-01-20.11:11:44</LastIntrospectionLocalTimestamp>
       <ObjectId>7</ObjectId>
     </schema>
@@ -16819,9 +16815,25 @@
     </schema>
     <schema id="5565" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2025-01-20.17:11:16.900</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2025-01-20.11:11:16</LastIntrospectionLocalTimestamp>
+      <DescriptionsCheckSum>7457206793</DescriptionsCheckSum>
+      <Grants>1682105033|||0|execute|G
+1682105033|||2|execute|D
+1698105090|||0|execute|G
+1698105090|||2|execute|D
+1714105147|||0|execute|G
+1714105147|||2|execute|D
+1730105204|||0|execute|G
+1730105204|||2|execute|D
+1746105261|||0|execute|G
+1746105261|||2|execute|D
+1762105318|||0|execute|G
+1762105318|||2|execute|D
+1778105375|||0|execute|G
+1778105375|||2|execute|D</Grants>
+      <IntrospectionTimestamp>2025-01-21.16:14:23.603</IntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-21.10:14:23</LastIntrospectionLocalTimestamp>
       <ObjectId>1</ObjectId>
+      <PermissionsCheckSum>13973644095</PermissionsCheckSum>
     </schema>
     <schema id="5566" parent="5510" name="guest">
       <ObjectId>2</ObjectId>
@@ -17027,59 +17039,157 @@
       <LedgerViewId>0</LedgerViewId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
-    <check id="5594" parent="5568" name="CK_Answers_Response">
+    <routine id="5594" parent="5565" name="SeedSessions">
+      <CreatedTimestamp>2025-01-21.16:14:22.750</CreatedTimestamp>
+      <ModifiedTimestamp>2025-01-21.16:14:22.750</ModifiedTimestamp>
+      <ObjectId>1794105432</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1683</SourceTextLength>
+    </routine>
+    <routine id="5595" parent="5565" name="fn_diagramobjects">
+      <CreatedTimestamp>2025-01-21.16:10:05.120</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.120</ModifiedTimestamp>
+      <ObjectId>1778105375</ObjectId>
+      <RoutineType>scalar-fun</RoutineType>
+      <SourceTextLength>1647</SourceTextLength>
+    </routine>
+    <routine id="5596" parent="5565" name="sp_alterdiagram">
+      <CreatedTimestamp>2025-01-21.16:10:05.117</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.117</ModifiedTimestamp>
+      <ObjectId>1746105261</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1501</SourceTextLength>
+    </routine>
+    <routine id="5597" parent="5565" name="sp_creatediagram">
+      <CreatedTimestamp>2025-01-21.16:10:05.110</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.110</ModifiedTimestamp>
+      <ObjectId>1714105147</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1223</SourceTextLength>
+    </routine>
+    <routine id="5598" parent="5565" name="sp_dropdiagram">
+      <CreatedTimestamp>2025-01-21.16:10:05.117</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.117</ModifiedTimestamp>
+      <ObjectId>1762105318</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>896</SourceTextLength>
+    </routine>
+    <routine id="5599" parent="5565" name="sp_helpdiagramdefinition">
+      <CreatedTimestamp>2025-01-21.16:10:05.110</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.110</ModifiedTimestamp>
+      <ObjectId>1698105090</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>921</SourceTextLength>
+    </routine>
+    <routine id="5600" parent="5565" name="sp_helpdiagrams">
+      <CreatedTimestamp>2025-01-21.16:10:05.107</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.107</ModifiedTimestamp>
+      <ObjectId>1682105033</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>658</SourceTextLength>
+    </routine>
+    <routine id="5601" parent="5565" name="sp_renamediagram">
+      <CreatedTimestamp>2025-01-21.16:10:05.113</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.113</ModifiedTimestamp>
+      <ObjectId>1730105204</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1721</SourceTextLength>
+    </routine>
+    <routine id="5602" parent="5565" name="sp_upgraddiagrams">
+      <CreatedTimestamp>2025-01-21.16:10:05.103</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.103</ModifiedTimestamp>
+      <ObjectId>1618104805</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1463</SourceTextLength>
+    </routine>
+    <table id="5603" parent="5565" name="sysdiagrams">
+      <CreatedTimestamp>2025-01-21.16:10:05.103</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2025-01-21.16:10:05.103</ModifiedTimestamp>
+      <ObjectId>1634104862</ObjectId>
+      <LedgerViewId>0</LedgerViewId>
+      <LobDataSpaceId>1</LobDataSpaceId>
+    </table>
+    <check id="5604" parent="5568" name="CK_Answers_Response">
       <CreatedTimestamp>2025-01-17.11:49:11.460</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.460</ModifiedTimestamp>
       <ObjectId>338100245</ObjectId>
       <Predicate>[OptionId] IS NOT NULL AND [TextAnswer] IS NULL OR [OptionId] IS NULL AND [TextAnswer] IS NOT NULL</Predicate>
     </check>
-    <column id="5595" parent="5568" name="Id">
+    <column id="5605" parent="5568" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>274100017</DefaultConstraintId>
       <DefaultConstraintName>DF__Answers__Id__10566F31</DefaultConstraintName>
     </column>
-    <column id="5596" parent="5568" name="UserId">
+    <column id="5606" parent="5568" name="UserId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5597" parent="5568" name="QuestionId">
+    <column id="5607" parent="5568" name="QuestionId">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5598" parent="5568" name="OptionId">
+    <column id="5608" parent="5568" name="OptionId">
       <Position>4</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5599" parent="5568" name="TextAnswer">
+    <column id="5609" parent="5568" name="TextAnswer">
       <Position>5</Position>
       <StoredType>nvarchar(1000 char)|0s</StoredType>
     </column>
-    <column id="5600" parent="5568" name="CreatedAt">
+    <column id="5610" parent="5568" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>290100074</DefaultConstraintId>
       <DefaultConstraintName>DF__Answers__Created__114A936A</DefaultConstraintName>
     </column>
-    <default id="5601" parent="5568" name="DF__Answers__Id__10566F31">
+    <default id="5611" parent="5568" name="DF__Answers__Id__10566F31">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>274100017</ObjectId>
     </default>
-    <default id="5602" parent="5568" name="DF__Answers__Created__114A936A">
+    <default id="5612" parent="5568" name="DF__Answers__Created__114A936A">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>290100074</ObjectId>
     </default>
-    <foreign-key id="5603" parent="5568" name="FK_Answers_Question">
+    <foreign-key id="5613" parent="5568" name="FK_Answers_Question">
       <ColNames>QuestionId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.457</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.457</ModifiedTimestamp>
@@ -17088,7 +17198,7 @@
       <RefTableId>1989582126</RefTableId>
       <RefTableName>Questions</RefTableName>
     </foreign-key>
-    <foreign-key id="5604" parent="5568" name="FK_Answers_Option">
+    <foreign-key id="5614" parent="5568" name="FK_Answers_Option">
       <ColNames>OptionId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.457</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.457</ModifiedTimestamp>
@@ -17097,7 +17207,7 @@
       <RefTableId>146099561</RefTableId>
       <RefTableName>Options</RefTableName>
     </foreign-key>
-    <index id="5605" parent="5568" name="PK__Answers__3214EC071474826D">
+    <index id="5615" parent="5568" name="PK__Answers__3214EC071474826D">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17105,7 +17215,7 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5606" parent="5568" name="IX_Answers_User">
+    <index id="5616" parent="5568" name="IX_Answers_User">
       <ColNames>UserId</ColNames>
       <IncludedColNames>QuestionId
 OptionId
@@ -17113,7 +17223,7 @@ CreatedAt</IncludedColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5607" parent="5568" name="IX_Answers_Question">
+    <index id="5617" parent="5568" name="IX_Answers_Question">
       <ColNames>QuestionId</ColNames>
       <IncludedColNames>UserId
 OptionId
@@ -17121,7 +17231,7 @@ CreatedAt</IncludedColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5608" parent="5568" name="PK__Answers__3214EC071474826D">
+    <key id="5618" parent="5568" name="PK__Answers__3214EC071474826D">
       <CreatedTimestamp>2025-01-17.11:49:11.457</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17129,87 +17239,87 @@ CreatedAt</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Answers__3214EC071474826D</UnderlyingIndexName>
     </key>
-    <column id="5609" parent="5569" name="Id">
+    <column id="5619" parent="5569" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>818101955</DefaultConstraintId>
       <DefaultConstraintName>DF__Bookings__Id__30C33EC3</DefaultConstraintName>
     </column>
-    <column id="5610" parent="5569" name="ModifiedAt">
+    <column id="5620" parent="5569" name="ModifiedAt">
       <Position>2</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5611" parent="5569" name="IsDeleted">
+    <column id="5621" parent="5569" name="IsDeleted">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>834102012</DefaultConstraintId>
       <DefaultConstraintName>DF__Bookings__IsDele__31B762FC</DefaultConstraintName>
     </column>
-    <column id="5612" parent="5569" name="Status">
+    <column id="5622" parent="5569" name="Status">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5613" parent="5569" name="SessionId">
+    <column id="5623" parent="5569" name="SessionId">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5614" parent="5569" name="UserId">
+    <column id="5624" parent="5569" name="UserId">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5615" parent="5569" name="TestId">
+    <column id="5625" parent="5569" name="TestId">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5616" parent="5569" name="BookingDate">
+    <column id="5626" parent="5569" name="BookingDate">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>850102069</DefaultConstraintId>
       <DefaultConstraintName>DF__Bookings__Bookin__32AB8735</DefaultConstraintName>
     </column>
-    <column id="5617" parent="5569" name="ExpiresAt">
+    <column id="5627" parent="5569" name="ExpiresAt">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>866102126</DefaultConstraintId>
       <DefaultConstraintName>DF__Bookings__Expire__339FAB6E</DefaultConstraintName>
     </column>
-    <default id="5618" parent="5569" name="DF__Bookings__Id__30C33EC3">
+    <default id="5628" parent="5569" name="DF__Bookings__Id__30C33EC3">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:06:37.987</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>818101955</ObjectId>
     </default>
-    <default id="5619" parent="5569" name="DF__Bookings__IsDele__31B762FC">
+    <default id="5629" parent="5569" name="DF__Bookings__IsDele__31B762FC">
       <ColNames>IsDeleted</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:06:37.987</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>834102012</ObjectId>
     </default>
-    <default id="5620" parent="5569" name="DF__Bookings__Bookin__32AB8735">
+    <default id="5630" parent="5569" name="DF__Bookings__Bookin__32AB8735">
       <ColNames>BookingDate</ColNames>
       <DefaultExpression>getdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:06:37.987</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>850102069</ObjectId>
     </default>
-    <default id="5621" parent="5569" name="DF__Bookings__Expire__339FAB6E">
+    <default id="5631" parent="5569" name="DF__Bookings__Expire__339FAB6E">
       <ColNames>ExpiresAt</ColNames>
       <DefaultExpression>dateadd(hour,24,getdate())</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:06:37.987</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>866102126</ObjectId>
     </default>
-    <foreign-key id="5622" parent="5569" name="FK__Bookings__Sessio__3493CFA7">
+    <foreign-key id="5632" parent="5569" name="FK__Bookings__Sessio__3493CFA7">
       <ColNames>SessionId</ColNames>
       <CreatedTimestamp>2025-01-17.12:06:37.990</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:06:37.990</ModifiedTimestamp>
@@ -17219,7 +17329,7 @@ CreatedAt</IncludedColNames>
       <RefTableId>530100929</RefTableId>
       <RefTableName>Sessions</RefTableName>
     </foreign-key>
-    <foreign-key id="5623" parent="5569" name="FK__Bookings__UserId__3587F3E0">
+    <foreign-key id="5633" parent="5569" name="FK__Bookings__UserId__3587F3E0">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2025-01-17.12:06:37.990</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:06:37.990</ModifiedTimestamp>
@@ -17230,7 +17340,7 @@ CreatedAt</IncludedColNames>
       <RefTableName>Users</RefTableName>
       <RefTableParentName>Identity</RefTableParentName>
     </foreign-key>
-    <foreign-key id="5624" parent="5569" name="FK__Bookings__TestId__367C1819">
+    <foreign-key id="5634" parent="5569" name="FK__Bookings__TestId__367C1819">
       <ColNames>TestId</ColNames>
       <CreatedTimestamp>2025-01-17.12:06:37.990</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:06:37.990</ModifiedTimestamp>
@@ -17240,7 +17350,7 @@ CreatedAt</IncludedColNames>
       <RefTableId>1685581043</RefTableId>
       <RefTableName>Tests</RefTableName>
     </foreign-key>
-    <index id="5625" parent="5569" name="PK__Bookings__3214EC078D07DE91">
+    <index id="5635" parent="5569" name="PK__Bookings__3214EC078D07DE91">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17248,34 +17358,34 @@ CreatedAt</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5626" parent="5569" name="UQ_User_ActiveBooking">
+    <index id="5636" parent="5569" name="UQ_User_ActiveBooking">
       <ColNames>UserId
 IsDeleted</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5627" parent="5569" name="IX_Bookings_UserId">
+    <index id="5637" parent="5569" name="IX_Bookings_UserId">
       <ColNames>UserId</ColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5628" parent="5569" name="IX_Bookings_SessionId">
+    <index id="5638" parent="5569" name="IX_Bookings_SessionId">
       <ColNames>SessionId</ColNames>
       <Position>4</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5629" parent="5569" name="IX_Bookings_TestId">
+    <index id="5639" parent="5569" name="IX_Bookings_TestId">
       <ColNames>TestId</ColNames>
       <Position>5</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5630" parent="5569" name="IX_Bookings_ExpiresAt">
+    <index id="5640" parent="5569" name="IX_Bookings_ExpiresAt">
       <ColNames>ExpiresAt</ColNames>
       <Position>6</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5631" parent="5569" name="PK__Bookings__3214EC078D07DE91">
+    <key id="5641" parent="5569" name="PK__Bookings__3214EC078D07DE91">
       <CreatedTimestamp>2025-01-17.12:06:37.987</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:06:37.987</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17283,40 +17393,40 @@ IsDeleted</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Bookings__3214EC078D07DE91</UnderlyingIndexName>
     </key>
-    <key id="5632" parent="5569" name="UQ_User_ActiveBooking">
+    <key id="5642" parent="5569" name="UQ_User_ActiveBooking">
       <CreatedTimestamp>2025-01-17.12:06:37.987</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:06:37.987</ModifiedTimestamp>
       <ObjectId>802101898</ObjectId>
       <UnderlyingIndexName>UQ_User_ActiveBooking</UnderlyingIndexName>
     </key>
-    <column id="5633" parent="5570" name="Id">
+    <column id="5643" parent="5570" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>498100815</DefaultConstraintId>
       <DefaultConstraintName>DF__Contingencie__Id__1DB06A4F</DefaultConstraintName>
     </column>
-    <column id="5634" parent="5570" name="ContingencyType">
+    <column id="5644" parent="5570" name="ContingencyType">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5635" parent="5570" name="ContingencyExplanation">
+    <column id="5645" parent="5570" name="ContingencyExplanation">
       <Position>3</Position>
       <StoredType>nvarchar(500 char)|0s</StoredType>
     </column>
-    <column id="5636" parent="5570" name="VenueId">
+    <column id="5646" parent="5570" name="VenueId">
       <Position>4</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <default id="5637" parent="5570" name="DF__Contingencie__Id__1DB06A4F">
+    <default id="5647" parent="5570" name="DF__Contingencie__Id__1DB06A4F">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:04:14.783</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>498100815</ObjectId>
     </default>
-    <foreign-key id="5638" parent="5570" name="FK__Contingen__Venue__1EA48E88">
+    <foreign-key id="5648" parent="5570" name="FK__Contingen__Venue__1EA48E88">
       <ColNames>VenueId</ColNames>
       <CreatedTimestamp>2025-01-17.12:04:14.783</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:04:14.783</ModifiedTimestamp>
@@ -17326,7 +17436,7 @@ IsDeleted</ColNames>
       <RefTableId>386100416</RefTableId>
       <RefTableName>Venues</RefTableName>
     </foreign-key>
-    <index id="5639" parent="5570" name="PK__Continge__3214EC07D7FEC557">
+    <index id="5649" parent="5570" name="PK__Continge__3214EC07D7FEC557">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17334,12 +17444,12 @@ IsDeleted</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5640" parent="5570" name="IX_Contingencies_VenueId">
+    <index id="5650" parent="5570" name="IX_Contingencies_VenueId">
       <ColNames>VenueId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5641" parent="5570" name="PK__Continge__3214EC07D7FEC557">
+    <key id="5651" parent="5570" name="PK__Continge__3214EC07D7FEC557">
       <CreatedTimestamp>2025-01-17.12:04:14.783</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:04:14.783</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17347,73 +17457,73 @@ IsDeleted</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Continge__3214EC07D7FEC557</UnderlyingIndexName>
     </key>
-    <column id="5642" parent="5571" name="Id">
+    <column id="5652" parent="5571" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>178099675</DefaultConstraintId>
       <DefaultConstraintName>DF__Options__Id__0A9D95DB</DefaultConstraintName>
     </column>
-    <column id="5643" parent="5571" name="QuestionId">
+    <column id="5653" parent="5571" name="QuestionId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5644" parent="5571" name="OptionText">
+    <column id="5654" parent="5571" name="OptionText">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5645" parent="5571" name="IsCorrect">
+    <column id="5655" parent="5571" name="IsCorrect">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <column id="5646" parent="5571" name="OrderInQuestion">
+    <column id="5656" parent="5571" name="OrderInQuestion">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5647" parent="5571" name="Explanation">
+    <column id="5657" parent="5571" name="Explanation">
       <Position>6</Position>
       <StoredType>nvarchar(1000 char)|0s</StoredType>
     </column>
-    <column id="5648" parent="5571" name="CreatedAt">
+    <column id="5658" parent="5571" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>194099732</DefaultConstraintId>
       <DefaultConstraintName>DF__Options__Created__0B91BA14</DefaultConstraintName>
     </column>
-    <column id="5649" parent="5571" name="UpdatedAt">
+    <column id="5659" parent="5571" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>210099789</DefaultConstraintId>
       <DefaultConstraintName>DF__Options__Updated__0C85DE4D</DefaultConstraintName>
     </column>
-    <default id="5650" parent="5571" name="DF__Options__Id__0A9D95DB">
+    <default id="5660" parent="5571" name="DF__Options__Id__0A9D95DB">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>178099675</ObjectId>
     </default>
-    <default id="5651" parent="5571" name="DF__Options__Created__0B91BA14">
+    <default id="5661" parent="5571" name="DF__Options__Created__0B91BA14">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>194099732</ObjectId>
     </default>
-    <default id="5652" parent="5571" name="DF__Options__Updated__0C85DE4D">
+    <default id="5662" parent="5571" name="DF__Options__Updated__0C85DE4D">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>210099789</ObjectId>
     </default>
-    <foreign-key id="5653" parent="5571" name="FK_Options_Question">
+    <foreign-key id="5663" parent="5571" name="FK_Options_Question">
       <ColNames>QuestionId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.453</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
@@ -17423,7 +17533,7 @@ IsDeleted</ColNames>
       <RefTableId>1989582126</RefTableId>
       <RefTableName>Questions</RefTableName>
     </foreign-key>
-    <index id="5654" parent="5571" name="PK__Options__3214EC07B7548C06">
+    <index id="5664" parent="5571" name="PK__Options__3214EC07B7548C06">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17431,7 +17541,7 @@ IsDeleted</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5655" parent="5571" name="IX_Options_Question">
+    <index id="5665" parent="5571" name="IX_Options_Question">
       <ColNames>QuestionId</ColNames>
       <Condition>[IsCorrect]=1</Condition>
       <IncludedColNames>IsCorrect
@@ -17440,7 +17550,7 @@ OptionText</IncludedColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5656" parent="5571" name="PK__Options__3214EC07B7548C06">
+    <key id="5666" parent="5571" name="PK__Options__3214EC07B7548C06">
       <CreatedTimestamp>2025-01-17.11:49:11.453</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17448,50 +17558,50 @@ OptionText</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Options__3214EC07B7548C06</UnderlyingIndexName>
     </key>
-    <column id="5657" parent="5572" name="Id">
+    <column id="5667" parent="5572" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>98099390</DefaultConstraintId>
       <DefaultConstraintName>DF__QuestionImag__Id__05D8E0BE</DefaultConstraintName>
     </column>
-    <column id="5658" parent="5572" name="QuestionId">
+    <column id="5668" parent="5572" name="QuestionId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5659" parent="5572" name="ImageUrl">
+    <column id="5669" parent="5572" name="ImageUrl">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(1000 char)|0s</StoredType>
     </column>
-    <column id="5660" parent="5572" name="OrderInQuestion">
+    <column id="5670" parent="5572" name="OrderInQuestion">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5661" parent="5572" name="CreatedAt">
+    <column id="5671" parent="5572" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>114099447</DefaultConstraintId>
       <DefaultConstraintName>DF__QuestionI__Creat__06CD04F7</DefaultConstraintName>
     </column>
-    <default id="5662" parent="5572" name="DF__QuestionImag__Id__05D8E0BE">
+    <default id="5672" parent="5572" name="DF__QuestionImag__Id__05D8E0BE">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>98099390</ObjectId>
     </default>
-    <default id="5663" parent="5572" name="DF__QuestionI__Creat__06CD04F7">
+    <default id="5673" parent="5572" name="DF__QuestionI__Creat__06CD04F7">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>114099447</ObjectId>
     </default>
-    <foreign-key id="5664" parent="5572" name="FK_QuestionImages_Question">
+    <foreign-key id="5674" parent="5572" name="FK_QuestionImages_Question">
       <ColNames>QuestionId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.453</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
@@ -17501,7 +17611,7 @@ OptionText</IncludedColNames>
       <RefTableId>1989582126</RefTableId>
       <RefTableName>Questions</RefTableName>
     </foreign-key>
-    <index id="5665" parent="5572" name="PK__Question__3214EC07D5E6A513">
+    <index id="5675" parent="5572" name="PK__Question__3214EC07D5E6A513">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17509,7 +17619,7 @@ OptionText</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5666" parent="5572" name="PK__Question__3214EC07D5E6A513">
+    <key id="5676" parent="5572" name="PK__Question__3214EC07D5E6A513">
       <CreatedTimestamp>2025-01-17.11:49:11.453</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.453</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17517,21 +17627,21 @@ OptionText</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Question__3214EC07D5E6A513</UnderlyingIndexName>
     </key>
-    <column id="5667" parent="5573" name="Id">
+    <column id="5677" parent="5573" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5668" parent="5573" name="Name">
+    <column id="5678" parent="5573" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5669" parent="5573" name="Description">
+    <column id="5679" parent="5573" name="Description">
       <Position>3</Position>
       <StoredType>nvarchar(255 char)|0s</StoredType>
     </column>
-    <index id="5670" parent="5573" name="PK__Question__3214EC073275476E">
+    <index id="5680" parent="5573" name="PK__Question__3214EC073275476E">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17539,13 +17649,13 @@ OptionText</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5671" parent="5573" name="UQ_QuestionTypes_Name">
+    <index id="5681" parent="5573" name="UQ_QuestionTypes_Name">
       <ColNames>Name</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5672" parent="5573" name="PK__Question__3214EC073275476E">
+    <key id="5682" parent="5573" name="PK__Question__3214EC073275476E">
       <CreatedTimestamp>2025-01-17.11:49:11.430</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.430</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17553,146 +17663,146 @@ OptionText</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Question__3214EC073275476E</UnderlyingIndexName>
     </key>
-    <key id="5673" parent="5573" name="UQ_QuestionTypes_Name">
+    <key id="5683" parent="5573" name="UQ_QuestionTypes_Name">
       <CreatedTimestamp>2025-01-17.11:49:11.430</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.430</ModifiedTimestamp>
       <ObjectId>1557580587</ObjectId>
       <UnderlyingIndexName>UQ_QuestionTypes_Name</UnderlyingIndexName>
     </key>
-    <check id="5674" parent="5574" name="CK_Questions_Difficulty">
+    <check id="5684" parent="5574" name="CK_Questions_Difficulty">
       <ColNames>DifficultyLevel</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <ObjectId>18099105</ObjectId>
       <Predicate>[DifficultyLevel]&gt;=1 AND [DifficultyLevel]&lt;=3</Predicate>
     </check>
-    <check id="5675" parent="5574" name="CK_Questions_MinCorrectOptions">
+    <check id="5685" parent="5574" name="CK_Questions_MinCorrectOptions">
       <ColNames>MinimumCorrectOptions</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <ObjectId>50099219</ObjectId>
       <Predicate>[MinimumCorrectOptions] IS NULL OR [MinimumCorrectOptions]&gt;0</Predicate>
     </check>
-    <check id="5676" parent="5574" name="CK_Questions_Points">
+    <check id="5686" parent="5574" name="CK_Questions_Points">
       <ColNames>Points</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <ObjectId>34099162</ObjectId>
       <Predicate>[Points]&gt;0</Predicate>
     </check>
-    <column id="5677" parent="5574" name="Id">
+    <column id="5687" parent="5574" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>2021582240</DefaultConstraintId>
       <DefaultConstraintName>DF__Questions__Id__787EE5A0</DefaultConstraintName>
     </column>
-    <column id="5678" parent="5574" name="QuestionTypeId">
+    <column id="5688" parent="5574" name="QuestionTypeId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5679" parent="5574" name="Scenario">
+    <column id="5689" parent="5574" name="Scenario">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5680" parent="5574" name="QuestionText">
+    <column id="5690" parent="5574" name="QuestionText">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5681" parent="5574" name="SectionTemplateId">
+    <column id="5691" parent="5574" name="SectionTemplateId">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5682" parent="5574" name="TestSectionId">
+    <column id="5692" parent="5574" name="TestSectionId">
       <Position>6</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5683" parent="5574" name="DifficultyLevel">
+    <column id="5693" parent="5574" name="DifficultyLevel">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>tinyint|0s</StoredType>
       <DefaultConstraintId>2037582297</DefaultConstraintId>
       <DefaultConstraintName>DF__Questions__Diffi__797309D9</DefaultConstraintName>
     </column>
-    <column id="5684" parent="5574" name="Points">
+    <column id="5694" parent="5574" name="Points">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>decimal(5,2)|0s</StoredType>
       <DefaultConstraintId>2053582354</DefaultConstraintId>
       <DefaultConstraintName>DF__Questions__Point__7A672E12</DefaultConstraintName>
     </column>
-    <column id="5685" parent="5574" name="MinimumCorrectOptions">
+    <column id="5695" parent="5574" name="MinimumCorrectOptions">
       <Position>9</Position>
       <StoredType>tinyint|0s</StoredType>
     </column>
-    <column id="5686" parent="5574" name="IsActive">
+    <column id="5696" parent="5574" name="IsActive">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>2069582411</DefaultConstraintId>
       <DefaultConstraintName>DF__Questions__IsAct__7B5B524B</DefaultConstraintName>
     </column>
-    <column id="5687" parent="5574" name="CreatedAt">
+    <column id="5697" parent="5574" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>2085582468</DefaultConstraintId>
       <DefaultConstraintName>DF__Questions__Creat__7C4F7684</DefaultConstraintName>
     </column>
-    <column id="5688" parent="5574" name="UpdatedAt">
+    <column id="5698" parent="5574" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>12</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>2101582525</DefaultConstraintId>
       <DefaultConstraintName>DF__Questions__Updat__7D439ABD</DefaultConstraintName>
     </column>
-    <default id="5689" parent="5574" name="DF__Questions__Id__787EE5A0">
+    <default id="5699" parent="5574" name="DF__Questions__Id__787EE5A0">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2021582240</ObjectId>
     </default>
-    <default id="5690" parent="5574" name="DF__Questions__Diffi__797309D9">
+    <default id="5700" parent="5574" name="DF__Questions__Diffi__797309D9">
       <ColNames>DifficultyLevel</ColNames>
       <DefaultExpression>2</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2037582297</ObjectId>
     </default>
-    <default id="5691" parent="5574" name="DF__Questions__Point__7A672E12">
+    <default id="5701" parent="5574" name="DF__Questions__Point__7A672E12">
       <ColNames>Points</ColNames>
       <DefaultExpression>1.00</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2053582354</ObjectId>
     </default>
-    <default id="5692" parent="5574" name="DF__Questions__IsAct__7B5B524B">
+    <default id="5702" parent="5574" name="DF__Questions__IsAct__7B5B524B">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>1</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2069582411</ObjectId>
     </default>
-    <default id="5693" parent="5574" name="DF__Questions__Creat__7C4F7684">
+    <default id="5703" parent="5574" name="DF__Questions__Creat__7C4F7684">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2085582468</ObjectId>
     </default>
-    <default id="5694" parent="5574" name="DF__Questions__Updat__7D439ABD">
+    <default id="5704" parent="5574" name="DF__Questions__Updat__7D439ABD">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2101582525</ObjectId>
     </default>
-    <foreign-key id="5695" parent="5574" name="FK_Questions_QuestionType">
+    <foreign-key id="5705" parent="5574" name="FK_Questions_QuestionType">
       <ColNames>QuestionTypeId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
@@ -17701,7 +17811,7 @@ OptionText</IncludedColNames>
       <RefTableId>1525580473</RefTableId>
       <RefTableName>QuestionTypes</RefTableName>
     </foreign-key>
-    <foreign-key id="5696" parent="5574" name="FK_Questions_SectionTemplate">
+    <foreign-key id="5706" parent="5574" name="FK_Questions_SectionTemplate">
       <ColNames>SectionTemplateId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
@@ -17710,7 +17820,7 @@ OptionText</IncludedColNames>
       <RefTableId>1573580644</RefTableId>
       <RefTableName>SectionTemplates</RefTableName>
     </foreign-key>
-    <foreign-key id="5697" parent="5574" name="FK_Questions_TestSection">
+    <foreign-key id="5707" parent="5574" name="FK_Questions_TestSection">
       <ColNames>TestSectionId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.450</ModifiedTimestamp>
@@ -17719,7 +17829,7 @@ OptionText</IncludedColNames>
       <RefTableId>1845581613</RefTableId>
       <RefTableName>TestSections</RefTableName>
     </foreign-key>
-    <index id="5698" parent="5574" name="PK__Question__3214EC07200E64D3">
+    <index id="5708" parent="5574" name="PK__Question__3214EC07200E64D3">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17727,7 +17837,7 @@ OptionText</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5699" parent="5574" name="IX_Questions_Composite">
+    <index id="5709" parent="5574" name="IX_Questions_Composite">
       <ColNames>SectionTemplateId
 TestSectionId
 QuestionTypeId</ColNames>
@@ -17738,7 +17848,7 @@ IsActive</IncludedColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5700" parent="5574" name="IX_Questions_TestSection">
+    <index id="5710" parent="5574" name="IX_Questions_TestSection">
       <ColNames>TestSectionId</ColNames>
       <Condition>[IsActive]=1</Condition>
       <IncludedColNames>QuestionTypeId
@@ -17747,7 +17857,7 @@ DifficultyLevel</IncludedColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5701" parent="5574" name="PK__Question__3214EC07200E64D3">
+    <key id="5711" parent="5574" name="PK__Question__3214EC07200E64D3">
       <CreatedTimestamp>2025-01-17.11:49:11.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17755,7 +17865,7 @@ DifficultyLevel</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Question__3214EC07200E64D3</UnderlyingIndexName>
     </key>
-    <trigger id="5702" parent="5574" name="TR_Questions_MinimumOptions">
+    <trigger id="5712" parent="5574" name="TR_Questions_MinimumOptions">
       <CreatedTimestamp>2025-01-17.11:52:08.797</CreatedTimestamp>
       <Events>IU</Events>
       <ModifiedTimestamp>2025-01-17.11:52:08.797</ModifiedTimestamp>
@@ -17763,73 +17873,73 @@ DifficultyLevel</IncludedColNames>
       <SourceTextLength>650</SourceTextLength>
       <Turn>after-stmt</Turn>
     </trigger>
-    <column id="5703" parent="5575" name="Id">
+    <column id="5713" parent="5575" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>1621580815</DefaultConstraintId>
       <DefaultConstraintName>DF__SectionTempl__Id__60A75C0F</DefaultConstraintName>
     </column>
-    <column id="5704" parent="5575" name="Name">
+    <column id="5714" parent="5575" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(255 char)|0s</StoredType>
     </column>
-    <column id="5705" parent="5575" name="Description">
+    <column id="5715" parent="5575" name="Description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(1000 char)|0s</StoredType>
     </column>
-    <column id="5706" parent="5575" name="CreatedAt">
+    <column id="5716" parent="5575" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1637580872</DefaultConstraintId>
       <DefaultConstraintName>DF__SectionTe__Creat__619B8048</DefaultConstraintName>
     </column>
-    <column id="5707" parent="5575" name="UpdatedAt">
+    <column id="5717" parent="5575" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1653580929</DefaultConstraintId>
       <DefaultConstraintName>DF__SectionTe__Updat__628FA481</DefaultConstraintName>
     </column>
-    <column id="5708" parent="5575" name="IsActive">
+    <column id="5718" parent="5575" name="IsActive">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>1669580986</DefaultConstraintId>
       <DefaultConstraintName>DF__SectionTe__IsAct__6383C8BA</DefaultConstraintName>
     </column>
-    <default id="5709" parent="5575" name="DF__SectionTempl__Id__60A75C0F">
+    <default id="5719" parent="5575" name="DF__SectionTempl__Id__60A75C0F">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.437</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1621580815</ObjectId>
     </default>
-    <default id="5710" parent="5575" name="DF__SectionTe__Creat__619B8048">
+    <default id="5720" parent="5575" name="DF__SectionTe__Creat__619B8048">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.437</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1637580872</ObjectId>
     </default>
-    <default id="5711" parent="5575" name="DF__SectionTe__Updat__628FA481">
+    <default id="5721" parent="5575" name="DF__SectionTe__Updat__628FA481">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.437</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1653580929</ObjectId>
     </default>
-    <default id="5712" parent="5575" name="DF__SectionTe__IsAct__6383C8BA">
+    <default id="5722" parent="5575" name="DF__SectionTe__IsAct__6383C8BA">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>1</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.437</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1669580986</ObjectId>
     </default>
-    <index id="5713" parent="5575" name="PK__SectionT__3214EC07CDCA8B15">
+    <index id="5723" parent="5575" name="PK__SectionT__3214EC07CDCA8B15">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17837,13 +17947,13 @@ DifficultyLevel</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5714" parent="5575" name="UQ_SectionTemplates_Name">
+    <index id="5724" parent="5575" name="UQ_SectionTemplates_Name">
       <ColNames>Name</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5715" parent="5575" name="PK__SectionT__3214EC07CDCA8B15">
+    <key id="5725" parent="5575" name="PK__SectionT__3214EC07CDCA8B15">
       <CreatedTimestamp>2025-01-17.11:49:11.437</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.437</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17851,79 +17961,79 @@ DifficultyLevel</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__SectionT__3214EC07CDCA8B15</UnderlyingIndexName>
     </key>
-    <key id="5716" parent="5575" name="UQ_SectionTemplates_Name">
+    <key id="5726" parent="5575" name="UQ_SectionTemplates_Name">
       <CreatedTimestamp>2025-01-17.11:49:11.437</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.437</ModifiedTimestamp>
       <ObjectId>1605580758</ObjectId>
       <UnderlyingIndexName>UQ_SectionTemplates_Name</UnderlyingIndexName>
     </key>
-    <column id="5717" parent="5576" name="Id">
+    <column id="5727" parent="5576" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>562101043</DefaultConstraintId>
       <DefaultConstraintName>DF__Sessions__Id__2180FB33</DefaultConstraintName>
     </column>
-    <column id="5718" parent="5576" name="Date">
+    <column id="5728" parent="5576" name="Date">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5719" parent="5576" name="Status">
+    <column id="5729" parent="5576" name="Status">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5720" parent="5576" name="StartTime">
+    <column id="5730" parent="5576" name="StartTime">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <column id="5721" parent="5576" name="EndTime">
+    <column id="5731" parent="5576" name="EndTime">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <column id="5722" parent="5576" name="Capacity">
+    <column id="5732" parent="5576" name="Capacity">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5723" parent="5576" name="IsDeleted">
+    <column id="5733" parent="5576" name="IsDeleted">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>578101100</DefaultConstraintId>
       <DefaultConstraintName>DF__Sessions__IsDele__22751F6C</DefaultConstraintName>
     </column>
-    <column id="5724" parent="5576" name="ModifiedAt">
+    <column id="5734" parent="5576" name="ModifiedAt">
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5725" parent="5576" name="VenueId">
+    <column id="5735" parent="5576" name="VenueId">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5726" parent="5576" name="ContingencyId">
+    <column id="5736" parent="5576" name="ContingencyId">
       <Position>10</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <default id="5727" parent="5576" name="DF__Sessions__Id__2180FB33">
+    <default id="5737" parent="5576" name="DF__Sessions__Id__2180FB33">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:04:26.323</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>562101043</ObjectId>
     </default>
-    <default id="5728" parent="5576" name="DF__Sessions__IsDele__22751F6C">
+    <default id="5738" parent="5576" name="DF__Sessions__IsDele__22751F6C">
       <ColNames>IsDeleted</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:04:26.323</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>578101100</ObjectId>
     </default>
-    <foreign-key id="5729" parent="5576" name="FK__Sessions__VenueI__236943A5">
+    <foreign-key id="5739" parent="5576" name="FK__Sessions__VenueI__236943A5">
       <ColNames>VenueId</ColNames>
       <CreatedTimestamp>2025-01-17.12:04:26.323</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:04:26.323</ModifiedTimestamp>
@@ -17933,7 +18043,7 @@ DifficultyLevel</IncludedColNames>
       <RefTableId>386100416</RefTableId>
       <RefTableName>Venues</RefTableName>
     </foreign-key>
-    <foreign-key id="5730" parent="5576" name="FK__Sessions__Contin__245D67DE">
+    <foreign-key id="5740" parent="5576" name="FK__Sessions__Contin__245D67DE">
       <ColNames>ContingencyId</ColNames>
       <CreatedTimestamp>2025-01-17.12:04:26.323</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:04:26.323</ModifiedTimestamp>
@@ -17943,7 +18053,7 @@ DifficultyLevel</IncludedColNames>
       <RefTableId>466100701</RefTableId>
       <RefTableName>Contingencies</RefTableName>
     </foreign-key>
-    <index id="5731" parent="5576" name="PK__Sessions__3214EC07A6DD76E2">
+    <index id="5741" parent="5576" name="PK__Sessions__3214EC07A6DD76E2">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17951,17 +18061,17 @@ DifficultyLevel</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5732" parent="5576" name="IX_Sessions_ContingencyId">
+    <index id="5742" parent="5576" name="IX_Sessions_ContingencyId">
       <ColNames>ContingencyId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5733" parent="5576" name="IX_Sessions_VenueId">
+    <index id="5743" parent="5576" name="IX_Sessions_VenueId">
       <ColNames>VenueId</ColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5734" parent="5576" name="PK__Sessions__3214EC07A6DD76E2">
+    <key id="5744" parent="5576" name="PK__Sessions__3214EC07A6DD76E2">
       <CreatedTimestamp>2025-01-17.12:04:26.323</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:04:26.323</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17969,88 +18079,88 @@ DifficultyLevel</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Sessions__3214EC07A6DD76E2</UnderlyingIndexName>
     </key>
-    <check id="5735" parent="5577" name="CK_TestSections_Contribution">
+    <check id="5745" parent="5577" name="CK_TestSections_Contribution">
       <ColNames>ContributionPercentage</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
       <ObjectId>1957582012</ObjectId>
       <Predicate>[ContributionPercentage]&gt;=0 AND [ContributionPercentage]&lt;=100</Predicate>
     </check>
-    <check id="5736" parent="5577" name="CK_TestSections_QuestionCount">
+    <check id="5746" parent="5577" name="CK_TestSections_QuestionCount">
       <ColNames>QuestionCount</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
       <ObjectId>1973582069</ObjectId>
       <Predicate>[QuestionCount]&gt;0</Predicate>
     </check>
-    <column id="5737" parent="5577" name="Id">
+    <column id="5747" parent="5577" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>1877581727</DefaultConstraintId>
       <DefaultConstraintName>DF__TestSections__Id__6FE99F9F</DefaultConstraintName>
     </column>
-    <column id="5738" parent="5577" name="TestId">
+    <column id="5748" parent="5577" name="TestId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5739" parent="5577" name="SectionTemplateId">
+    <column id="5749" parent="5577" name="SectionTemplateId">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5740" parent="5577" name="ContributionPercentage">
+    <column id="5750" parent="5577" name="ContributionPercentage">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>decimal(5,2)|0s</StoredType>
     </column>
-    <column id="5741" parent="5577" name="OrderInTest">
+    <column id="5751" parent="5577" name="OrderInTest">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5742" parent="5577" name="QuestionCount">
+    <column id="5752" parent="5577" name="QuestionCount">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5743" parent="5577" name="CreatedAt">
+    <column id="5753" parent="5577" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1893581784</DefaultConstraintId>
       <DefaultConstraintName>DF__TestSecti__Creat__70DDC3D8</DefaultConstraintName>
     </column>
-    <column id="5744" parent="5577" name="UpdatedAt">
+    <column id="5754" parent="5577" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1909581841</DefaultConstraintId>
       <DefaultConstraintName>DF__TestSecti__Updat__71D1E811</DefaultConstraintName>
     </column>
-    <default id="5745" parent="5577" name="DF__TestSections__Id__6FE99F9F">
+    <default id="5755" parent="5577" name="DF__TestSections__Id__6FE99F9F">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.443</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1877581727</ObjectId>
     </default>
-    <default id="5746" parent="5577" name="DF__TestSecti__Creat__70DDC3D8">
+    <default id="5756" parent="5577" name="DF__TestSecti__Creat__70DDC3D8">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.443</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1893581784</ObjectId>
     </default>
-    <default id="5747" parent="5577" name="DF__TestSecti__Updat__71D1E811">
+    <default id="5757" parent="5577" name="DF__TestSecti__Updat__71D1E811">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1909581841</ObjectId>
     </default>
-    <foreign-key id="5748" parent="5577" name="FK_TestSections_Test">
+    <foreign-key id="5758" parent="5577" name="FK_TestSections_Test">
       <ColNames>TestId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
@@ -18059,7 +18169,7 @@ DifficultyLevel</IncludedColNames>
       <RefTableId>1685581043</RefTableId>
       <RefTableName>Tests</RefTableName>
     </foreign-key>
-    <foreign-key id="5749" parent="5577" name="FK_TestSections_SectionTemplate">
+    <foreign-key id="5759" parent="5577" name="FK_TestSections_SectionTemplate">
       <ColNames>SectionTemplateId</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.447</ModifiedTimestamp>
@@ -18068,7 +18178,7 @@ DifficultyLevel</IncludedColNames>
       <RefTableId>1573580644</RefTableId>
       <RefTableName>SectionTemplates</RefTableName>
     </foreign-key>
-    <index id="5750" parent="5577" name="PK__TestSect__3214EC07C79F3AD3">
+    <index id="5760" parent="5577" name="PK__TestSect__3214EC07C79F3AD3">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18076,7 +18186,7 @@ DifficultyLevel</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5751" parent="5577" name="IX_TestSections_TestId">
+    <index id="5761" parent="5577" name="IX_TestSections_TestId">
       <ColNames>TestId</ColNames>
       <IncludedColNames>SectionTemplateId
 ContributionPercentage
@@ -18085,7 +18195,7 @@ QuestionCount</IncludedColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5752" parent="5577" name="IX_TestSections_SectionTemplate">
+    <index id="5762" parent="5577" name="IX_TestSections_SectionTemplate">
       <ColNames>SectionTemplateId</ColNames>
       <IncludedColNames>TestId
 ContributionPercentage
@@ -18094,7 +18204,7 @@ OrderInTest</IncludedColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5753" parent="5577" name="PK__TestSect__3214EC07C79F3AD3">
+    <key id="5763" parent="5577" name="PK__TestSect__3214EC07C79F3AD3">
       <CreatedTimestamp>2025-01-17.11:49:11.443</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.443</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18102,7 +18212,7 @@ OrderInTest</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__TestSect__3214EC07C79F3AD3</UnderlyingIndexName>
     </key>
-    <trigger id="5754" parent="5577" name="TR_TestSections_QuestionCount">
+    <trigger id="5764" parent="5577" name="TR_TestSections_QuestionCount">
       <CreatedTimestamp>2025-01-17.11:52:08.773</CreatedTimestamp>
       <Events>IU</Events>
       <ModifiedTimestamp>2025-01-17.11:52:08.773</ModifiedTimestamp>
@@ -18110,114 +18220,114 @@ OrderInTest</IncludedColNames>
       <SourceTextLength>718</SourceTextLength>
       <Turn>after-stmt</Turn>
     </trigger>
-    <check id="5755" parent="5578" name="CK_Tests_Duration">
+    <check id="5765" parent="5578" name="CK_Tests_Duration">
       <ColNames>Duration</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.440</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <ObjectId>1797581442</ObjectId>
       <Predicate>[Duration]&gt;0</Predicate>
     </check>
-    <check id="5756" parent="5578" name="CK_Tests_PassScore">
+    <check id="5766" parent="5578" name="CK_Tests_PassScore">
       <ColNames>PassScore</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.440</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <ObjectId>1813581499</ObjectId>
       <Predicate>[PassScore]&gt;=0 AND [PassScore]&lt;=100</Predicate>
     </check>
-    <check id="5757" parent="5578" name="CK_Tests_TotalQuestions">
+    <check id="5767" parent="5578" name="CK_Tests_TotalQuestions">
       <ColNames>TotalQuestions</ColNames>
       <CreatedTimestamp>2025-01-17.11:49:11.440</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <ObjectId>1829581556</ObjectId>
       <Predicate>[TotalQuestions]&gt;0</Predicate>
     </check>
-    <column id="5758" parent="5578" name="Id">
+    <column id="5768" parent="5578" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>1733581214</DefaultConstraintId>
       <DefaultConstraintName>DF__Tests__Id__6754599E</DefaultConstraintName>
     </column>
-    <column id="5759" parent="5578" name="Name">
+    <column id="5769" parent="5578" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(255 char)|0s</StoredType>
     </column>
-    <column id="5760" parent="5578" name="Description">
+    <column id="5770" parent="5578" name="Description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(1000 char)|0s</StoredType>
     </column>
-    <column id="5761" parent="5578" name="Duration">
+    <column id="5771" parent="5578" name="Duration">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5762" parent="5578" name="PassScore">
+    <column id="5772" parent="5578" name="PassScore">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>decimal(5,2)|0s</StoredType>
     </column>
-    <column id="5763" parent="5578" name="TestVersion">
+    <column id="5773" parent="5578" name="TestVersion">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(50 char)|0s</StoredType>
     </column>
-    <column id="5764" parent="5578" name="TotalQuestions">
+    <column id="5774" parent="5578" name="TotalQuestions">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5765" parent="5578" name="CreatedAt">
+    <column id="5775" parent="5578" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1749581271</DefaultConstraintId>
       <DefaultConstraintName>DF__Tests__CreatedAt__68487DD7</DefaultConstraintName>
     </column>
-    <column id="5766" parent="5578" name="UpdatedAt">
+    <column id="5776" parent="5578" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1765581328</DefaultConstraintId>
       <DefaultConstraintName>DF__Tests__UpdatedAt__693CA210</DefaultConstraintName>
     </column>
-    <column id="5767" parent="5578" name="IsActive">
+    <column id="5777" parent="5578" name="IsActive">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>1781581385</DefaultConstraintId>
       <DefaultConstraintName>DF__Tests__IsActive__6A30C649</DefaultConstraintName>
     </column>
-    <default id="5768" parent="5578" name="DF__Tests__Id__6754599E">
+    <default id="5778" parent="5578" name="DF__Tests__Id__6754599E">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1733581214</ObjectId>
     </default>
-    <default id="5769" parent="5578" name="DF__Tests__CreatedAt__68487DD7">
+    <default id="5779" parent="5578" name="DF__Tests__CreatedAt__68487DD7">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1749581271</ObjectId>
     </default>
-    <default id="5770" parent="5578" name="DF__Tests__UpdatedAt__693CA210">
+    <default id="5780" parent="5578" name="DF__Tests__UpdatedAt__693CA210">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1765581328</ObjectId>
     </default>
-    <default id="5771" parent="5578" name="DF__Tests__IsActive__6A30C649">
+    <default id="5781" parent="5578" name="DF__Tests__IsActive__6A30C649">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>1</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1781581385</ObjectId>
     </default>
-    <index id="5772" parent="5578" name="PK__Tests__3214EC0723853D21">
+    <index id="5782" parent="5578" name="PK__Tests__3214EC0723853D21">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18225,14 +18335,14 @@ OrderInTest</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5773" parent="5578" name="UQ_Tests_NameVersion">
+    <index id="5783" parent="5578" name="UQ_Tests_NameVersion">
       <ColNames>Name
 TestVersion</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5774" parent="5578" name="PK__Tests__3214EC0723853D21">
+    <key id="5784" parent="5578" name="PK__Tests__3214EC0723853D21">
       <CreatedTimestamp>2025-01-17.11:49:11.440</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18240,56 +18350,56 @@ TestVersion</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Tests__3214EC0723853D21</UnderlyingIndexName>
     </key>
-    <key id="5775" parent="5578" name="UQ_Tests_NameVersion">
+    <key id="5785" parent="5578" name="UQ_Tests_NameVersion">
       <CreatedTimestamp>2025-01-17.11:49:11.440</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:49:11.440</ModifiedTimestamp>
       <ObjectId>1717581157</ObjectId>
       <UnderlyingIndexName>UQ_Tests_NameVersion</UnderlyingIndexName>
     </key>
-    <column id="5776" parent="5579" name="VenueId">
+    <column id="5786" parent="5579" name="VenueId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5777" parent="5579" name="ExemptionDate">
+    <column id="5787" parent="5579" name="ExemptionDate">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5778" parent="5579" name="Reason">
+    <column id="5788" parent="5579" name="Reason">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(500 char)|0s</StoredType>
     </column>
-    <column id="5779" parent="5579" name="HasBeenApproved">
+    <column id="5789" parent="5579" name="HasBeenApproved">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>962102468</DefaultConstraintId>
       <DefaultConstraintName>DF__VenueExem__HasBe__395884C4</DefaultConstraintName>
     </column>
-    <column id="5780" parent="5579" name="HasBeenExempted">
+    <column id="5790" parent="5579" name="HasBeenExempted">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>978102525</DefaultConstraintId>
       <DefaultConstraintName>DF__VenueExem__HasBe__3A4CA8FD</DefaultConstraintName>
     </column>
-    <default id="5781" parent="5579" name="DF__VenueExem__HasBe__395884C4">
+    <default id="5791" parent="5579" name="DF__VenueExem__HasBe__395884C4">
       <ColNames>HasBeenApproved</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:07:59.710</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>962102468</ObjectId>
     </default>
-    <default id="5782" parent="5579" name="DF__VenueExem__HasBe__3A4CA8FD">
+    <default id="5792" parent="5579" name="DF__VenueExem__HasBe__3A4CA8FD">
       <ColNames>HasBeenExempted</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:07:59.710</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>978102525</ObjectId>
     </default>
-    <index id="5783" parent="5579" name="PK__VenueExe__3C57E5F2CF6C973B">
+    <index id="5793" parent="5579" name="PK__VenueExe__3C57E5F2CF6C973B">
       <Clustering>1</Clustering>
       <ColNames>VenueId</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18297,7 +18407,7 @@ TestVersion</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5784" parent="5579" name="PK__VenueExe__3C57E5F2CF6C973B">
+    <key id="5794" parent="5579" name="PK__VenueExe__3C57E5F2CF6C973B">
       <CreatedTimestamp>2025-01-17.12:07:59.710</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:07:59.710</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18305,63 +18415,63 @@ TestVersion</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__VenueExe__3C57E5F2CF6C973B</UnderlyingIndexName>
     </key>
-    <column id="5785" parent="5580" name="Id">
+    <column id="5795" parent="5580" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>418100530</DefaultConstraintId>
       <DefaultConstraintName>DF__Venues__Id__18EBB532</DefaultConstraintName>
     </column>
-    <column id="5786" parent="5580" name="Name">
+    <column id="5796" parent="5580" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5787" parent="5580" name="Address">
+    <column id="5797" parent="5580" name="Address">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5788" parent="5580" name="ImageUrls">
+    <column id="5798" parent="5580" name="ImageUrls">
       <Position>4</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5789" parent="5580" name="Capacity">
+    <column id="5799" parent="5580" name="Capacity">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5790" parent="5580" name="IsDeleted">
+    <column id="5800" parent="5580" name="IsDeleted">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>434100587</DefaultConstraintId>
       <DefaultConstraintName>DF__Venues__IsDelete__19DFD96B</DefaultConstraintName>
     </column>
-    <column id="5791" parent="5580" name="ModifiedAt">
+    <column id="5801" parent="5580" name="ModifiedAt">
       <Position>7</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5792" parent="5580" name="DistrictId">
+    <column id="5802" parent="5580" name="DistrictId">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <default id="5793" parent="5580" name="DF__Venues__Id__18EBB532">
+    <default id="5803" parent="5580" name="DF__Venues__Id__18EBB532">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:02:18.343</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>418100530</ObjectId>
     </default>
-    <default id="5794" parent="5580" name="DF__Venues__IsDelete__19DFD96B">
+    <default id="5804" parent="5580" name="DF__Venues__IsDelete__19DFD96B">
       <ColNames>IsDeleted</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.12:02:18.343</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>434100587</ObjectId>
     </default>
-    <foreign-key id="5795" parent="5580" name="FK__Venues__District__1AD3FDA4">
+    <foreign-key id="5805" parent="5580" name="FK__Venues__District__1AD3FDA4">
       <ColNames>DistrictId</ColNames>
       <CreatedTimestamp>2025-01-17.12:02:18.343</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:02:18.343</ModifiedTimestamp>
@@ -18372,7 +18482,7 @@ TestVersion</ColNames>
       <RefTableName>Districts</RefTableName>
       <RefTableParentName>Locale</RefTableParentName>
     </foreign-key>
-    <index id="5796" parent="5580" name="PK__Venues__3214EC07E0E9B218">
+    <index id="5806" parent="5580" name="PK__Venues__3214EC07E0E9B218">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18380,12 +18490,12 @@ TestVersion</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5797" parent="5580" name="IX_Venues_DistrictId">
+    <index id="5807" parent="5580" name="IX_Venues_DistrictId">
       <ColNames>DistrictId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5798" parent="5580" name="PK__Venues__3214EC07E0E9B218">
+    <key id="5808" parent="5580" name="PK__Venues__3214EC07E0E9B218">
       <CreatedTimestamp>2025-01-17.12:02:18.343</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.12:02:18.343</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18393,55 +18503,55 @@ TestVersion</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Venues__3214EC07E0E9B218</UnderlyingIndexName>
     </key>
-    <column id="5799" parent="5581" name="LicenseClassID">
+    <column id="5809" parent="5581" name="LicenseClassID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5800" parent="5581" name="ClassName">
+    <column id="5810" parent="5581" name="ClassName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5801" parent="5581" name="ClassNameLower">
+    <column id="5811" parent="5581" name="ClassNameLower">
       <Computed>1</Computed>
       <Position>3</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([ClassName])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5802" parent="5581" name="Description">
+    <column id="5812" parent="5581" name="Description">
       <Position>4</Position>
       <StoredType>nvarchar(255 char)|0s</StoredType>
     </column>
-    <column id="5803" parent="5581" name="CreatedAt">
+    <column id="5813" parent="5581" name="CreatedAt">
       <Position>5</Position>
       <StoredType>datetime|0s</StoredType>
       <DefaultConstraintId>1093578934</DefaultConstraintId>
       <DefaultConstraintName>DF__LicenseCl__Creat__412EB0B6</DefaultConstraintName>
     </column>
-    <column id="5804" parent="5581" name="UpdatedAt">
+    <column id="5814" parent="5581" name="UpdatedAt">
       <Position>6</Position>
       <StoredType>datetime|0s</StoredType>
       <DefaultConstraintId>1109578991</DefaultConstraintId>
       <DefaultConstraintName>DF__LicenseCl__Updat__4222D4EF</DefaultConstraintName>
     </column>
-    <default id="5805" parent="5581" name="DF__LicenseCl__Creat__412EB0B6">
+    <default id="5815" parent="5581" name="DF__LicenseCl__Creat__412EB0B6">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:22:47.050</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1093578934</ObjectId>
     </default>
-    <default id="5806" parent="5581" name="DF__LicenseCl__Updat__4222D4EF">
+    <default id="5816" parent="5581" name="DF__LicenseCl__Updat__4222D4EF">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:22:47.050</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1109578991</ObjectId>
     </default>
-    <index id="5807" parent="5581" name="PK__LicenseC__50F72335F12EFDB7">
+    <index id="5817" parent="5581" name="PK__LicenseC__50F72335F12EFDB7">
       <Clustering>1</Clustering>
       <ColNames>LicenseClassID</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18449,19 +18559,19 @@ TestVersion</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5808" parent="5581" name="UQ__LicenseC__F8BF561B833DAB4E">
+    <index id="5818" parent="5581" name="UQ__LicenseC__F8BF561B833DAB4E">
       <ColNames>ClassName</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5809" parent="5581" name="IDX_ClassNameLower">
+    <index id="5819" parent="5581" name="IDX_ClassNameLower">
       <ColNames>ClassNameLower</ColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5810" parent="5581" name="PK__LicenseC__50F72335F12EFDB7">
+    <key id="5820" parent="5581" name="PK__LicenseC__50F72335F12EFDB7">
       <CreatedTimestamp>2025-01-17.11:22:47.050</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:22:47.050</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18469,14 +18579,14 @@ TestVersion</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__LicenseC__50F72335F12EFDB7</UnderlyingIndexName>
     </key>
-    <key id="5811" parent="5581" name="UQ__LicenseC__F8BF561B833DAB4E">
+    <key id="5821" parent="5581" name="UQ__LicenseC__F8BF561B833DAB4E">
       <CreatedTimestamp>2025-01-17.11:22:47.050</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:22:47.050</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1077578877</ObjectId>
       <UnderlyingIndexName>UQ__LicenseC__F8BF561B833DAB4E</UnderlyingIndexName>
     </key>
-    <check id="5812" parent="5582" name="CK__Permissio__Flags__33D4B598">
+    <check id="5822" parent="5582" name="CK__Permissio__Flags__33D4B598">
       <ColNames>Flags</ColNames>
       <CreatedTimestamp>2025-01-17.11:17:24.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.450</ModifiedTimestamp>
@@ -18484,22 +18594,22 @@ TestVersion</ColNames>
       <ObjectId>869578136</ObjectId>
       <Predicate>[Flags]&gt;=0</Predicate>
     </check>
-    <column id="5813" parent="5582" name="Id">
+    <column id="5823" parent="5582" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5814" parent="5582" name="RoleId">
+    <column id="5824" parent="5582" name="RoleId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5815" parent="5582" name="Flags">
+    <column id="5825" parent="5582" name="Flags">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="5816" parent="5582" name="FK__Permissio__RoleI__32E0915F">
+    <foreign-key id="5826" parent="5582" name="FK__Permissio__RoleI__32E0915F">
       <ColNames>RoleId</ColNames>
       <CreatedTimestamp>2025-01-17.11:17:24.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.450</ModifiedTimestamp>
@@ -18509,7 +18619,7 @@ TestVersion</ColNames>
       <RefTableId>773577794</RefTableId>
       <RefTableName>Roles</RefTableName>
     </foreign-key>
-    <index id="5817" parent="5582" name="PK__Permissi__3214EC07145780C8">
+    <index id="5827" parent="5582" name="PK__Permissi__3214EC07145780C8">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18517,12 +18627,12 @@ TestVersion</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5818" parent="5582" name="IDX_RoleId">
+    <index id="5828" parent="5582" name="IDX_RoleId">
       <ColNames>RoleId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5819" parent="5582" name="PK__Permissi__3214EC07145780C8">
+    <key id="5829" parent="5582" name="PK__Permissi__3214EC07145780C8">
       <CreatedTimestamp>2025-01-17.11:17:24.450</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.450</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18530,24 +18640,24 @@ TestVersion</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Permissi__3214EC07145780C8</UnderlyingIndexName>
     </key>
-    <check id="5820" parent="5583" name="CK__RoleUser__38996AB5">
+    <check id="5830" parent="5583" name="CK__RoleUser__38996AB5">
       <CreatedTimestamp>2025-01-17.11:17:24.487</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.487</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>949578421</ObjectId>
       <Predicate>[RoleId] IS NOT NULL AND [UserId] IS NOT NULL</Predicate>
     </check>
-    <column id="5821" parent="5583" name="RoleId">
+    <column id="5831" parent="5583" name="RoleId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5822" parent="5583" name="UserId">
+    <column id="5832" parent="5583" name="UserId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <foreign-key id="5823" parent="5583" name="FK__RoleUser__RoleId__36B12243">
+    <foreign-key id="5833" parent="5583" name="FK__RoleUser__RoleId__36B12243">
       <ColNames>RoleId</ColNames>
       <CreatedTimestamp>2025-01-17.11:17:24.487</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.487</ModifiedTimestamp>
@@ -18557,7 +18667,7 @@ TestVersion</ColNames>
       <RefTableId>773577794</RefTableId>
       <RefTableName>Roles</RefTableName>
     </foreign-key>
-    <foreign-key id="5824" parent="5583" name="FK__RoleUser__UserId__37A5467C">
+    <foreign-key id="5834" parent="5583" name="FK__RoleUser__UserId__37A5467C">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2025-01-17.11:17:24.487</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.487</ModifiedTimestamp>
@@ -18567,7 +18677,7 @@ TestVersion</ColNames>
       <RefTableId>581577110</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5825" parent="5583" name="PK__RoleUser__5B8242DE026220BA">
+    <index id="5835" parent="5583" name="PK__RoleUser__5B8242DE026220BA">
       <Clustering>1</Clustering>
       <ColNames>RoleId
 UserId</ColNames>
@@ -18576,13 +18686,13 @@ UserId</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5826" parent="5583" name="IDX_RoleId_UserId">
+    <index id="5836" parent="5583" name="IDX_RoleId_UserId">
       <ColNames>RoleId
 UserId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5827" parent="5583" name="PK__RoleUser__5B8242DE026220BA">
+    <key id="5837" parent="5583" name="PK__RoleUser__5B8242DE026220BA">
       <CreatedTimestamp>2025-01-17.11:17:24.487</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.487</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18590,7 +18700,7 @@ UserId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__RoleUser__5B8242DE026220BA</UnderlyingIndexName>
     </key>
-    <check id="5828" parent="5584" name="CK__Roles__IsDeleted__300424B4">
+    <check id="5838" parent="5584" name="CK__Roles__IsDeleted__300424B4">
       <ColNames>IsDeleted</ColNames>
       <CreatedTimestamp>2025-01-17.11:17:24.413</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.413</ModifiedTimestamp>
@@ -18598,27 +18708,27 @@ UserId</ColNames>
       <ObjectId>805577908</ObjectId>
       <Predicate>[IsDeleted]=1 OR [IsDeleted]=0</Predicate>
     </check>
-    <column id="5829" parent="5584" name="Id">
+    <column id="5839" parent="5584" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5830" parent="5584" name="Name">
+    <column id="5840" parent="5584" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5831" parent="5584" name="Description">
+    <column id="5841" parent="5584" name="Description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(500 char)|0s</StoredType>
     </column>
-    <column id="5832" parent="5584" name="IsDeleted">
+    <column id="5842" parent="5584" name="IsDeleted">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <index id="5833" parent="5584" name="PK__Roles__3214EC079DCEF075">
+    <index id="5843" parent="5584" name="PK__Roles__3214EC079DCEF075">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18626,7 +18736,7 @@ UserId</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5834" parent="5584" name="PK__Roles__3214EC079DCEF075">
+    <key id="5844" parent="5584" name="PK__Roles__3214EC079DCEF075">
       <CreatedTimestamp>2025-01-17.11:17:24.413</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:17:24.413</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18634,30 +18744,30 @@ UserId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Roles__3214EC079DCEF075</UnderlyingIndexName>
     </key>
-    <column id="5835" parent="5585" name="UserID">
+    <column id="5845" parent="5585" name="UserID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5836" parent="5585" name="LicenseClassID">
+    <column id="5846" parent="5585" name="LicenseClassID">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5837" parent="5585" name="AssignedAt">
+    <column id="5847" parent="5585" name="AssignedAt">
       <Position>3</Position>
       <StoredType>datetime|0s</StoredType>
       <DefaultConstraintId>1157579162</DefaultConstraintId>
       <DefaultConstraintName>DF__UserLicen__Assig__44FF419A</DefaultConstraintName>
     </column>
-    <default id="5838" parent="5585" name="DF__UserLicen__Assig__44FF419A">
+    <default id="5848" parent="5585" name="DF__UserLicen__Assig__44FF419A">
       <ColNames>AssignedAt</ColNames>
       <DefaultExpression>getdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:23:03.880</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1157579162</ObjectId>
     </default>
-    <foreign-key id="5839" parent="5585" name="FK__UserLicen__UserI__45F365D3">
+    <foreign-key id="5849" parent="5585" name="FK__UserLicen__UserI__45F365D3">
       <ColNames>UserID</ColNames>
       <CreatedTimestamp>2025-01-17.11:23:03.880</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:23:03.880</ModifiedTimestamp>
@@ -18668,7 +18778,7 @@ UserId</ColNames>
       <RefTableId>581577110</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <foreign-key id="5840" parent="5585" name="FK__UserLicen__Licen__46E78A0C">
+    <foreign-key id="5850" parent="5585" name="FK__UserLicen__Licen__46E78A0C">
       <ColNames>LicenseClassID</ColNames>
       <CreatedTimestamp>2025-01-17.11:23:03.880</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:23:03.880</ModifiedTimestamp>
@@ -18679,7 +18789,7 @@ UserId</ColNames>
       <RefTableId>1045578763</RefTableId>
       <RefTableName>LicenseClasses</RefTableName>
     </foreign-key>
-    <index id="5841" parent="5585" name="PK__UserLice__5287BE9F6B8CB9D7">
+    <index id="5851" parent="5585" name="PK__UserLice__5287BE9F6B8CB9D7">
       <Clustering>1</Clustering>
       <ColNames>UserID
 LicenseClassID</ColNames>
@@ -18688,18 +18798,18 @@ LicenseClassID</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5842" parent="5585" name="IDX_UserID_LicenseClassID">
+    <index id="5852" parent="5585" name="IDX_UserID_LicenseClassID">
       <ColNames>UserID
 LicenseClassID</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5843" parent="5585" name="IDX_LicenseClassID">
+    <index id="5853" parent="5585" name="IDX_LicenseClassID">
       <ColNames>LicenseClassID</ColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5844" parent="5585" name="PK__UserLice__5287BE9F6B8CB9D7">
+    <key id="5854" parent="5585" name="PK__UserLice__5287BE9F6B8CB9D7">
       <CreatedTimestamp>2025-01-17.11:23:03.880</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:23:03.880</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18707,7 +18817,7 @@ LicenseClassID</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__UserLice__5287BE9F6B8CB9D7</UnderlyingIndexName>
     </key>
-    <check id="5845" parent="5586" name="CK__Users__NationalI__29572725">
+    <check id="5855" parent="5586" name="CK__Users__NationalI__29572725">
       <ColNames>NationalIDType</ColNames>
       <CreatedTimestamp>2025-01-17.11:08:10.260</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
@@ -18715,7 +18825,7 @@ LicenseClassID</ColNames>
       <ObjectId>693577509</ObjectId>
       <Predicate>[NationalIDType]=&apos;PASSPORT&apos; OR [NationalIDType]=&apos;NIDA&apos;</Predicate>
     </check>
-    <check id="5846" parent="5586" name="CK__Users__Sex__2A4B4B5E">
+    <check id="5856" parent="5586" name="CK__Users__Sex__2A4B4B5E">
       <ColNames>Sex</ColNames>
       <CreatedTimestamp>2025-01-17.11:08:10.260</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
@@ -18723,149 +18833,149 @@ LicenseClassID</ColNames>
       <ObjectId>709577566</ObjectId>
       <Predicate>[Sex]=&apos;Female&apos; OR [Sex]=&apos;Male&apos;</Predicate>
     </check>
-    <column id="5847" parent="5586" name="UserID">
+    <column id="5857" parent="5586" name="UserID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>677577452</DefaultConstraintId>
       <DefaultConstraintName>DF__Users__UserID__286302EC</DefaultConstraintName>
     </column>
-    <column id="5848" parent="5586" name="NationalID">
+    <column id="5858" parent="5586" name="NationalID">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(20 char)|0s</StoredType>
     </column>
-    <column id="5849" parent="5586" name="NationalIDType">
+    <column id="5859" parent="5586" name="NationalIDType">
       <Position>3</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5850" parent="5586" name="FirstName">
+    <column id="5860" parent="5586" name="FirstName">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5851" parent="5586" name="MiddleName">
+    <column id="5861" parent="5586" name="MiddleName">
       <Position>5</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5852" parent="5586" name="Surname">
+    <column id="5862" parent="5586" name="Surname">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5853" parent="5586" name="Sex">
+    <column id="5863" parent="5586" name="Sex">
       <Position>7</Position>
       <StoredType>nvarchar(10 char)|0s</StoredType>
     </column>
-    <column id="5854" parent="5586" name="DateOfBirth">
+    <column id="5864" parent="5586" name="DateOfBirth">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="5855" parent="5586" name="Email">
+    <column id="5865" parent="5586" name="Email">
       <Position>9</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5856" parent="5586" name="PhoneNumber">
+    <column id="5866" parent="5586" name="PhoneNumber">
       <Position>10</Position>
       <StoredType>nvarchar(15 char)|0s</StoredType>
     </column>
-    <column id="5857" parent="5586" name="PasswordHash">
+    <column id="5867" parent="5586" name="PasswordHash">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>nvarchar(256 char)|0s</StoredType>
     </column>
-    <column id="5858" parent="5586" name="CreatedAt">
+    <column id="5868" parent="5586" name="CreatedAt">
       <Position>12</Position>
       <StoredType>datetime|0s</StoredType>
       <DefaultConstraintId>725577623</DefaultConstraintId>
       <DefaultConstraintName>DF__Users__CreatedAt__2B3F6F97</DefaultConstraintName>
     </column>
-    <column id="5859" parent="5586" name="UpdatedAt">
+    <column id="5869" parent="5586" name="UpdatedAt">
       <Position>13</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5860" parent="5586" name="DeletedAt">
+    <column id="5870" parent="5586" name="DeletedAt">
       <Position>14</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5861" parent="5586" name="IsActive">
+    <column id="5871" parent="5586" name="IsActive">
       <Position>15</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>741577680</DefaultConstraintId>
       <DefaultConstraintName>DF__Users__IsActive__2C3393D0</DefaultConstraintName>
     </column>
-    <column id="5862" parent="5586" name="LowerEmail">
+    <column id="5872" parent="5586" name="LowerEmail">
       <Computed>1</Computed>
       <Position>16</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([Email])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5863" parent="5586" name="LowerFirstName">
+    <column id="5873" parent="5586" name="LowerFirstName">
       <Computed>1</Computed>
       <Position>17</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([FirstName])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5864" parent="5586" name="LowerMiddleName">
+    <column id="5874" parent="5586" name="LowerMiddleName">
       <Computed>1</Computed>
       <Position>18</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([MiddleName])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5865" parent="5586" name="LowerSurname">
+    <column id="5875" parent="5586" name="LowerSurname">
       <Computed>1</Computed>
       <Position>19</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([Surname])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5866" parent="5586" name="LowerPhoneNumber">
+    <column id="5876" parent="5586" name="LowerPhoneNumber">
       <Computed>1</Computed>
       <Position>20</Position>
       <StoredType>nvarchar(15 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([PhoneNumber])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5867" parent="5586" name="LowerNationalID">
+    <column id="5877" parent="5586" name="LowerNationalID">
       <Computed>1</Computed>
       <Position>21</Position>
       <StoredType>nvarchar(20 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([NationalID])</DefaultConstraintDefaultExpression>
     </column>
-    <column id="5868" parent="5586" name="LowerSex">
+    <column id="5878" parent="5586" name="LowerSex">
       <Computed>1</Computed>
       <Position>22</Position>
       <StoredType>nvarchar(10 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([Sex])</DefaultConstraintDefaultExpression>
     </column>
-    <default id="5869" parent="5586" name="DF__Users__UserID__286302EC">
+    <default id="5879" parent="5586" name="DF__Users__UserID__286302EC">
       <ColNames>UserID</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>677577452</ObjectId>
     </default>
-    <default id="5870" parent="5586" name="DF__Users__CreatedAt__2B3F6F97">
+    <default id="5880" parent="5586" name="DF__Users__CreatedAt__2B3F6F97">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>725577623</ObjectId>
     </default>
-    <default id="5871" parent="5586" name="DF__Users__IsActive__2C3393D0">
+    <default id="5881" parent="5586" name="DF__Users__IsActive__2C3393D0">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>1</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>741577680</ObjectId>
     </default>
-    <index id="5872" parent="5586" name="PK__Users__1788CCACF4DCBFB0">
+    <index id="5882" parent="5586" name="PK__Users__1788CCACF4DCBFB0">
       <Clustering>1</Clustering>
       <ColNames>UserID</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -18873,7 +18983,7 @@ LicenseClassID</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5873" parent="5586" name="UC_FullName">
+    <index id="5883" parent="5586" name="UC_FullName">
       <ColNames>FirstName
 MiddleName
 Surname</ColNames>
@@ -18881,63 +18991,63 @@ Surname</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5874" parent="5586" name="UQ__Users__85FB4E38EC7A0654">
+    <index id="5884" parent="5586" name="UQ__Users__85FB4E38EC7A0654">
       <ColNames>PhoneNumber</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>3</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5875" parent="5586" name="UQ__Users__A9D10534946FA5F4">
+    <index id="5885" parent="5586" name="UQ__Users__A9D10534946FA5F4">
       <ColNames>Email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>4</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5876" parent="5586" name="UQ__Users__E9AA321A4BE23CEA">
+    <index id="5886" parent="5586" name="UQ__Users__E9AA321A4BE23CEA">
       <ColNames>NationalID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>5</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5877" parent="5586" name="IDX_LowerEmail">
+    <index id="5887" parent="5586" name="IDX_LowerEmail">
       <ColNames>LowerEmail</ColNames>
       <Position>6</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5878" parent="5586" name="IDX_LowerFirstName">
+    <index id="5888" parent="5586" name="IDX_LowerFirstName">
       <ColNames>LowerFirstName</ColNames>
       <Position>7</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5879" parent="5586" name="IDX_LowerMiddleName">
+    <index id="5889" parent="5586" name="IDX_LowerMiddleName">
       <ColNames>LowerMiddleName</ColNames>
       <Position>8</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5880" parent="5586" name="IDX_LowerSurname">
+    <index id="5890" parent="5586" name="IDX_LowerSurname">
       <ColNames>LowerSurname</ColNames>
       <Position>9</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5881" parent="5586" name="IDX_LowerPhoneNumber">
+    <index id="5891" parent="5586" name="IDX_LowerPhoneNumber">
       <ColNames>LowerPhoneNumber</ColNames>
       <Position>10</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5882" parent="5586" name="IDX_LowerNationalID">
+    <index id="5892" parent="5586" name="IDX_LowerNationalID">
       <ColNames>LowerNationalID</ColNames>
       <Position>11</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5883" parent="5586" name="IDX_LowerSex">
+    <index id="5893" parent="5586" name="IDX_LowerSex">
       <ColNames>LowerSex</ColNames>
       <Position>12</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5884" parent="5586" name="PK__Users__1788CCACF4DCBFB0">
+    <key id="5894" parent="5586" name="PK__Users__1788CCACF4DCBFB0">
       <CreatedTimestamp>2025-01-17.11:08:10.257</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.257</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -18945,34 +19055,34 @@ Surname</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Users__1788CCACF4DCBFB0</UnderlyingIndexName>
     </key>
-    <key id="5885" parent="5586" name="UQ__Users__E9AA321A4BE23CEA">
+    <key id="5895" parent="5586" name="UQ__Users__E9AA321A4BE23CEA">
       <CreatedTimestamp>2025-01-17.11:08:10.260</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>661577395</ObjectId>
       <UnderlyingIndexName>UQ__Users__E9AA321A4BE23CEA</UnderlyingIndexName>
     </key>
-    <key id="5886" parent="5586" name="UC_FullName">
+    <key id="5896" parent="5586" name="UC_FullName">
       <CreatedTimestamp>2025-01-17.11:08:10.257</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.257</ModifiedTimestamp>
       <ObjectId>613577224</ObjectId>
       <UnderlyingIndexName>UC_FullName</UnderlyingIndexName>
     </key>
-    <key id="5887" parent="5586" name="UQ__Users__A9D10534946FA5F4">
+    <key id="5897" parent="5586" name="UQ__Users__A9D10534946FA5F4">
       <CreatedTimestamp>2025-01-17.11:08:10.260</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>645577338</ObjectId>
       <UnderlyingIndexName>UQ__Users__A9D10534946FA5F4</UnderlyingIndexName>
     </key>
-    <key id="5888" parent="5586" name="UQ__Users__85FB4E38EC7A0654">
+    <key id="5898" parent="5586" name="UQ__Users__85FB4E38EC7A0654">
       <CreatedTimestamp>2025-01-17.11:08:10.260</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:08:10.260</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>629577281</ObjectId>
       <UnderlyingIndexName>UQ__Users__85FB4E38EC7A0654</UnderlyingIndexName>
     </key>
-    <trigger id="5889" parent="5586" name="trg_UpdateTimestamp">
+    <trigger id="5899" parent="5586" name="trg_UpdateTimestamp">
       <CreatedTimestamp>2025-01-17.11:08:48.740</CreatedTimestamp>
       <Events>U</Events>
       <ModifiedTimestamp>2025-01-17.11:08:48.740</ModifiedTimestamp>
@@ -18980,346 +19090,346 @@ Surname</ColNames>
       <SourceTextLength>363</SourceTextLength>
       <Turn>after-stmt</Turn>
     </trigger>
-    <column id="5890" parent="5587" name="RoleId">
+    <column id="5900" parent="5587" name="RoleId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5891" parent="5587" name="RoleName">
+    <column id="5901" parent="5587" name="RoleName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5892" parent="5587" name="RoleDescription">
+    <column id="5902" parent="5587" name="RoleDescription">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(500 char)|0s</StoredType>
     </column>
-    <column id="5893" parent="5587" name="RoleIsDeleted">
+    <column id="5903" parent="5587" name="RoleIsDeleted">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <column id="5894" parent="5587" name="PermissionId">
+    <column id="5904" parent="5587" name="PermissionId">
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5895" parent="5587" name="PermissionFlags">
+    <column id="5905" parent="5587" name="PermissionFlags">
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5896" parent="5588" name="UserID">
+    <column id="5906" parent="5588" name="UserID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5897" parent="5588" name="NationalID">
+    <column id="5907" parent="5588" name="NationalID">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(20 char)|0s</StoredType>
     </column>
-    <column id="5898" parent="5588" name="NationalIDType">
+    <column id="5908" parent="5588" name="NationalIDType">
       <Position>3</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5899" parent="5588" name="FirstName">
+    <column id="5909" parent="5588" name="FirstName">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5900" parent="5588" name="MiddleName">
+    <column id="5910" parent="5588" name="MiddleName">
       <Position>5</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5901" parent="5588" name="Surname">
+    <column id="5911" parent="5588" name="Surname">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5902" parent="5588" name="Sex">
+    <column id="5912" parent="5588" name="Sex">
       <Position>7</Position>
       <StoredType>nvarchar(10 char)|0s</StoredType>
     </column>
-    <column id="5903" parent="5588" name="DateOfBirth">
+    <column id="5913" parent="5588" name="DateOfBirth">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="5904" parent="5588" name="Age">
+    <column id="5914" parent="5588" name="Age">
       <Position>9</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5905" parent="5588" name="Email">
+    <column id="5915" parent="5588" name="Email">
       <Position>10</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5906" parent="5588" name="PhoneNumber">
+    <column id="5916" parent="5588" name="PhoneNumber">
       <Position>11</Position>
       <StoredType>nvarchar(15 char)|0s</StoredType>
     </column>
-    <column id="5907" parent="5588" name="CreatedAt">
+    <column id="5917" parent="5588" name="CreatedAt">
       <Position>12</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5908" parent="5588" name="UpdatedAt">
+    <column id="5918" parent="5588" name="UpdatedAt">
       <Position>13</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5909" parent="5588" name="DeletedAt">
+    <column id="5919" parent="5588" name="DeletedAt">
       <Position>14</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5910" parent="5588" name="IsActive">
+    <column id="5920" parent="5588" name="IsActive">
       <Position>15</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <column id="5911" parent="5589" name="UserID">
+    <column id="5921" parent="5589" name="UserID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5912" parent="5589" name="FirstName">
+    <column id="5922" parent="5589" name="FirstName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5913" parent="5589" name="MiddleName">
+    <column id="5923" parent="5589" name="MiddleName">
       <Position>3</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5914" parent="5589" name="Surname">
+    <column id="5924" parent="5589" name="Surname">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5915" parent="5589" name="DateOfBirth">
+    <column id="5925" parent="5589" name="DateOfBirth">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="5916" parent="5589" name="Age">
+    <column id="5926" parent="5589" name="Age">
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5917" parent="5589" name="LicenseClassName">
+    <column id="5927" parent="5589" name="LicenseClassName">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5918" parent="5589" name="LicenseClassAssignedAt">
+    <column id="5928" parent="5589" name="LicenseClassAssignedAt">
       <Position>8</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5919" parent="5590" name="UserID">
+    <column id="5929" parent="5590" name="UserID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5920" parent="5590" name="NationalID">
+    <column id="5930" parent="5590" name="NationalID">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(20 char)|0s</StoredType>
     </column>
-    <column id="5921" parent="5590" name="FirstName">
+    <column id="5931" parent="5590" name="FirstName">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5922" parent="5590" name="MiddleName">
+    <column id="5932" parent="5590" name="MiddleName">
       <Position>4</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5923" parent="5590" name="Surname">
+    <column id="5933" parent="5590" name="Surname">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5924" parent="5590" name="Sex">
+    <column id="5934" parent="5590" name="Sex">
       <Position>6</Position>
       <StoredType>nvarchar(10 char)|0s</StoredType>
     </column>
-    <column id="5925" parent="5590" name="DateOfBirth">
+    <column id="5935" parent="5590" name="DateOfBirth">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="5926" parent="5590" name="Age">
+    <column id="5936" parent="5590" name="Age">
       <Position>8</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5927" parent="5590" name="Email">
+    <column id="5937" parent="5590" name="Email">
       <Position>9</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5928" parent="5590" name="PhoneNumber">
+    <column id="5938" parent="5590" name="PhoneNumber">
       <Position>10</Position>
       <StoredType>nvarchar(15 char)|0s</StoredType>
     </column>
-    <column id="5929" parent="5590" name="CreatedAt">
+    <column id="5939" parent="5590" name="CreatedAt">
       <Position>11</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5930" parent="5590" name="UpdatedAt">
+    <column id="5940" parent="5590" name="UpdatedAt">
       <Position>12</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5931" parent="5590" name="DeletedAt">
+    <column id="5941" parent="5590" name="DeletedAt">
       <Position>13</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5932" parent="5590" name="IsActive">
+    <column id="5942" parent="5590" name="IsActive">
       <Position>14</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <column id="5933" parent="5590" name="RoleId">
+    <column id="5943" parent="5590" name="RoleId">
       <NotNull>1</NotNull>
       <Position>15</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5934" parent="5590" name="RoleName">
+    <column id="5944" parent="5590" name="RoleName">
       <NotNull>1</NotNull>
       <Position>16</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5935" parent="5591" name="UserID">
+    <column id="5945" parent="5591" name="UserID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5936" parent="5591" name="NationalID">
+    <column id="5946" parent="5591" name="NationalID">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(20 char)|0s</StoredType>
     </column>
-    <column id="5937" parent="5591" name="NationalIDType">
+    <column id="5947" parent="5591" name="NationalIDType">
       <Position>3</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5938" parent="5591" name="FirstName">
+    <column id="5948" parent="5591" name="FirstName">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5939" parent="5591" name="MiddleName">
+    <column id="5949" parent="5591" name="MiddleName">
       <Position>5</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5940" parent="5591" name="Surname">
+    <column id="5950" parent="5591" name="Surname">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5941" parent="5591" name="Sex">
+    <column id="5951" parent="5591" name="Sex">
       <Position>7</Position>
       <StoredType>nvarchar(10 char)|0s</StoredType>
     </column>
-    <column id="5942" parent="5591" name="DateOfBirth">
+    <column id="5952" parent="5591" name="DateOfBirth">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="5943" parent="5591" name="Age">
+    <column id="5953" parent="5591" name="Age">
       <Position>9</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5944" parent="5591" name="Email">
+    <column id="5954" parent="5591" name="Email">
       <Position>10</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5945" parent="5591" name="PhoneNumber">
+    <column id="5955" parent="5591" name="PhoneNumber">
       <Position>11</Position>
       <StoredType>nvarchar(15 char)|0s</StoredType>
     </column>
-    <column id="5946" parent="5591" name="CreatedAt">
+    <column id="5956" parent="5591" name="CreatedAt">
       <Position>12</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5947" parent="5591" name="UpdatedAt">
+    <column id="5957" parent="5591" name="UpdatedAt">
       <Position>13</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5948" parent="5591" name="DeletedAt">
+    <column id="5958" parent="5591" name="DeletedAt">
       <Position>14</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5949" parent="5591" name="IsActive">
+    <column id="5959" parent="5591" name="IsActive">
       <Position>15</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <column id="5950" parent="5592" name="Id">
+    <column id="5960" parent="5592" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>1413580074</DefaultConstraintId>
       <DefaultConstraintName>DF__Districts__Id__5441852A</DefaultConstraintName>
     </column>
-    <column id="5951" parent="5592" name="Name">
+    <column id="5961" parent="5592" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5952" parent="5592" name="RegionId">
+    <column id="5962" parent="5592" name="RegionId">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5953" parent="5592" name="CreatedAt">
+    <column id="5963" parent="5592" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1429580131</DefaultConstraintId>
       <DefaultConstraintName>DF__Districts__Creat__5535A963</DefaultConstraintName>
     </column>
-    <column id="5954" parent="5592" name="UpdatedAt">
+    <column id="5964" parent="5592" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1445580188</DefaultConstraintId>
       <DefaultConstraintName>DF__Districts__Updat__5629CD9C</DefaultConstraintName>
     </column>
-    <column id="5955" parent="5592" name="IsDeleted">
+    <column id="5965" parent="5592" name="IsDeleted">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>1461580245</DefaultConstraintId>
       <DefaultConstraintName>DF__Districts__IsDel__571DF1D5</DefaultConstraintName>
     </column>
-    <column id="5956" parent="5592" name="NameNormalized">
+    <column id="5966" parent="5592" name="NameNormalized">
       <Computed>1</Computed>
       <Position>7</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([Name])</DefaultConstraintDefaultExpression>
     </column>
-    <default id="5957" parent="5592" name="DF__Districts__Id__5441852A">
+    <default id="5967" parent="5592" name="DF__Districts__Id__5441852A">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.390</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1413580074</ObjectId>
     </default>
-    <default id="5958" parent="5592" name="DF__Districts__Creat__5535A963">
+    <default id="5968" parent="5592" name="DF__Districts__Creat__5535A963">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.390</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1429580131</ObjectId>
     </default>
-    <default id="5959" parent="5592" name="DF__Districts__Updat__5629CD9C">
+    <default id="5969" parent="5592" name="DF__Districts__Updat__5629CD9C">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.393</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1445580188</ObjectId>
     </default>
-    <default id="5960" parent="5592" name="DF__Districts__IsDel__571DF1D5">
+    <default id="5970" parent="5592" name="DF__Districts__IsDel__571DF1D5">
       <ColNames>IsDeleted</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.393</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1461580245</ObjectId>
     </default>
-    <foreign-key id="5961" parent="5592" name="FK_Districts_Region">
+    <foreign-key id="5971" parent="5592" name="FK_Districts_Region">
       <ColNames>RegionId</ColNames>
       <CreatedTimestamp>2025-01-17.11:37:32.393</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:37:32.393</ModifiedTimestamp>
@@ -19328,7 +19438,7 @@ Surname</ColNames>
       <RefTableId>1285579618</RefTableId>
       <RefTableName>Regions</RefTableName>
     </foreign-key>
-    <index id="5962" parent="5592" name="PK__District__3214EC077B63F078">
+    <index id="5972" parent="5592" name="PK__District__3214EC077B63F078">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -19336,7 +19446,7 @@ Surname</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5963" parent="5592" name="IDX_Districts_Name_Region">
+    <index id="5973" parent="5592" name="IDX_Districts_Name_Region">
       <ColNames>RegionId
 NameNormalized</ColNames>
       <Condition>[IsDeleted]=0</Condition>
@@ -19344,14 +19454,14 @@ NameNormalized</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5964" parent="5592" name="IDX_Districts_RegionId">
+    <index id="5974" parent="5592" name="IDX_Districts_RegionId">
       <ColNames>RegionId</ColNames>
       <IncludedColNames>Name
 IsDeleted</IncludedColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5965" parent="5592" name="PK__District__3214EC077B63F078">
+    <key id="5975" parent="5592" name="PK__District__3214EC077B63F078">
       <CreatedTimestamp>2025-01-17.11:37:32.390</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:37:32.390</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -19359,7 +19469,7 @@ IsDeleted</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__District__3214EC077B63F078</UnderlyingIndexName>
     </key>
-    <trigger id="5966" parent="5592" name="TR_Districts_UpdatedAt">
+    <trigger id="5976" parent="5592" name="TR_Districts_UpdatedAt">
       <CreatedTimestamp>2025-01-17.11:37:32.437</CreatedTimestamp>
       <Events>U</Events>
       <ModifiedTimestamp>2025-01-17.11:37:32.437</ModifiedTimestamp>
@@ -19367,75 +19477,75 @@ IsDeleted</IncludedColNames>
       <SourceTextLength>335</SourceTextLength>
       <Turn>after-stmt</Turn>
     </trigger>
-    <column id="5967" parent="5593" name="Id">
+    <column id="5977" parent="5593" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
       <DefaultConstraintId>1317579732</DefaultConstraintId>
       <DefaultConstraintName>DF__Regions__Id__4E88ABD4</DefaultConstraintName>
     </column>
-    <column id="5968" parent="5593" name="Name">
+    <column id="5978" parent="5593" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5969" parent="5593" name="CreatedAt">
+    <column id="5979" parent="5593" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1333579789</DefaultConstraintId>
       <DefaultConstraintName>DF__Regions__Created__4F7CD00D</DefaultConstraintName>
     </column>
-    <column id="5970" parent="5593" name="UpdatedAt">
+    <column id="5980" parent="5593" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime2|0s</StoredType>
       <DefaultConstraintId>1349579846</DefaultConstraintId>
       <DefaultConstraintName>DF__Regions__Updated__5070F446</DefaultConstraintName>
     </column>
-    <column id="5971" parent="5593" name="IsDeleted">
+    <column id="5981" parent="5593" name="IsDeleted">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>bit|0s</StoredType>
       <DefaultConstraintId>1365579903</DefaultConstraintId>
       <DefaultConstraintName>DF__Regions__IsDelet__5165187F</DefaultConstraintName>
     </column>
-    <column id="5972" parent="5593" name="NameNormalized">
+    <column id="5982" parent="5593" name="NameNormalized">
       <Computed>1</Computed>
       <Position>6</Position>
       <StoredType>nvarchar(100 char)|0s</StoredType>
       <DefaultConstraintInline>1</DefaultConstraintInline>
       <DefaultConstraintDefaultExpression>lower([Name])</DefaultConstraintDefaultExpression>
     </column>
-    <default id="5973" parent="5593" name="DF__Regions__Id__4E88ABD4">
+    <default id="5983" parent="5593" name="DF__Regions__Id__4E88ABD4">
       <ColNames>Id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1317579732</ObjectId>
     </default>
-    <default id="5974" parent="5593" name="DF__Regions__Created__4F7CD00D">
+    <default id="5984" parent="5593" name="DF__Regions__Created__4F7CD00D">
       <ColNames>CreatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1333579789</ObjectId>
     </default>
-    <default id="5975" parent="5593" name="DF__Regions__Updated__5070F446">
+    <default id="5985" parent="5593" name="DF__Regions__Updated__5070F446">
       <ColNames>UpdatedAt</ColNames>
       <DefaultExpression>getutcdate()</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1349579846</ObjectId>
     </default>
-    <default id="5976" parent="5593" name="DF__Regions__IsDelet__5165187F">
+    <default id="5986" parent="5593" name="DF__Regions__IsDelet__5165187F">
       <ColNames>IsDeleted</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2025-01-17.11:37:32.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1365579903</ObjectId>
     </default>
-    <index id="5977" parent="5593" name="PK__Regions__3214EC0787D86528">
+    <index id="5987" parent="5593" name="PK__Regions__3214EC0787D86528">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -19443,14 +19553,14 @@ IsDeleted</IncludedColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5978" parent="5593" name="IDX_Regions_Name">
+    <index id="5988" parent="5593" name="IDX_Regions_Name">
       <ColNames>NameNormalized</ColNames>
       <Condition>[IsDeleted]=0</Condition>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5979" parent="5593" name="PK__Regions__3214EC0787D86528">
+    <key id="5989" parent="5593" name="PK__Regions__3214EC0787D86528">
       <CreatedTimestamp>2025-01-17.11:37:32.353</CreatedTimestamp>
       <ModifiedTimestamp>2025-01-17.11:37:32.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -19458,7 +19568,7 @@ IsDeleted</IncludedColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Regions__3214EC0787D86528</UnderlyingIndexName>
     </key>
-    <trigger id="5980" parent="5593" name="TR_Regions_UpdatedAt">
+    <trigger id="5990" parent="5593" name="TR_Regions_UpdatedAt">
       <CreatedTimestamp>2025-01-17.11:37:32.417</CreatedTimestamp>
       <Events>U</Events>
       <ModifiedTimestamp>2025-01-17.11:37:32.417</ModifiedTimestamp>
@@ -19466,5 +19576,137 @@ IsDeleted</IncludedColNames>
       <SourceTextLength>327</SourceTextLength>
       <Turn>after-stmt</Turn>
     </trigger>
+    <argument id="5991" parent="5595">
+      <ArgumentDirection>R</ArgumentDirection>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="5992" parent="5596" name="@diagramname">
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <argument id="5993" parent="5596" name="@owner_id">
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="5994" parent="5596" name="@version">
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="5995" parent="5596" name="@definition">
+      <Position>4</Position>
+      <StoredType>varbinary(max)|0s</StoredType>
+    </argument>
+    <argument id="5996" parent="5597" name="@diagramname">
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <argument id="5997" parent="5597" name="@owner_id">
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="5998" parent="5597" name="@version">
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="5999" parent="5597" name="@definition">
+      <Position>4</Position>
+      <StoredType>varbinary(max)|0s</StoredType>
+    </argument>
+    <argument id="6000" parent="5598" name="@diagramname">
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <argument id="6001" parent="5598" name="@owner_id">
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="6002" parent="5599" name="@diagramname">
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <argument id="6003" parent="5599" name="@owner_id">
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="6004" parent="5600" name="@diagramname">
+      <DefaultExpression>NULL</DefaultExpression>
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <argument id="6005" parent="5600" name="@owner_id">
+      <DefaultExpression>NULL</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="6006" parent="5601" name="@diagramname">
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <argument id="6007" parent="5601" name="@owner_id">
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="6008" parent="5601" name="@new_diagramname">
+      <Position>3</Position>
+      <StoredType>sysname|0s</StoredType>
+    </argument>
+    <column id="6009" parent="5603" name="name">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>sysname|0s</StoredType>
+    </column>
+    <column id="6010" parent="5603" name="principal_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="6011" parent="5603" name="diagram_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="6012" parent="5603" name="version">
+      <Position>4</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="6013" parent="5603" name="definition">
+      <Position>5</Position>
+      <StoredType>varbinary(max)|0s</StoredType>
+    </column>
+    <index id="6014" parent="5603" name="PK__sysdiagr__C2B05B611AE6A482">
+      <Clustering>1</Clustering>
+      <ColNames>diagram_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <index id="6015" parent="5603" name="UK_principal_name">
+      <ColNames>principal_id
+name</ColNames>
+      <Position>2</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="6016" parent="5603" name="PK__sysdiagr__C2B05B611AE6A482">
+      <CreatedTimestamp>2025-01-21.16:10:05.107</CreatedTimestamp>
+      <ModifiedTimestamp>2025-01-21.16:10:05.107</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1650104919</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__sysdiagr__C2B05B611AE6A482</UnderlyingIndexName>
+    </key>
+    <key id="6017" parent="5603" name="UK_principal_name">
+      <CreatedTimestamp>2025-01-21.16:10:05.107</CreatedTimestamp>
+      <ModifiedTimestamp>2025-01-21.16:10:05.107</ModifiedTimestamp>
+      <ObjectId>1666104976</ObjectId>
+      <UnderlyingIndexName>UK_principal_name</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

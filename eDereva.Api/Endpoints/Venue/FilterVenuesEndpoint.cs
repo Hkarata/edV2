@@ -16,7 +16,7 @@ public class FilterVenuesEndpoint(IVenueRepository venueRepository)
         Version(2);
         Description(options =>
         {
-            options.WithTags("venues");
+            options.WithTags("Venue");
             options.WithSummary("Filters venues");
             options.WithDescription("The region Id is a must");
         });

@@ -20,4 +20,20 @@ public static class UserQueries
                     (@NationalID, @NationalIDType, @FirstName, @MiddleName, @Surname, @Sex, @DateOfBirth, @Email, @PhoneNumber, @PasswordHash, GETDATE());
             END
         """;
+
+    public static string AuthenticateUser =>
+        """
+            SELECT 
+                PasswordHash 
+            FROM [Identity].Users 
+            WHERE LowerPhoneNumber = @PhoneNumber;
+        """;
+
+    public static string GetUserDetails =>
+        """
+            SELECT 
+                UserID, NationalID, FirstName as GivenName, Surname, PhoneNumber, COALESCE(Email, 'unknown email') as Email 
+            FROM [Identity].Users 
+            WHERE LowerPhoneNumber = @PhoneNumber;
+        """;
 }

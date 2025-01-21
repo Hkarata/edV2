@@ -11,6 +11,8 @@ public static class ServiceRegistrar
 
         services.AddSingleton<IPasswordService, PasswordService>();
 
+        services.AddSingleton<ITokenService, TokenService>();
+
         return services;
     }
 }

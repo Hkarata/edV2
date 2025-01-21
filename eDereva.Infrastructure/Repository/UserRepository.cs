@@ -2,6 +2,7 @@ using eDereva.Application.Context;
 using eDereva.Application.Repositories;
 using eDereva.Application.Services;
 using eDereva.Domain.Contracts.Requests;
+using eDereva.Domain.Contracts.Responses;
 using eDereva.Domain.SQL_Queries;
 using Microsoft.Data.SqlClient;
 
@@ -38,5 +39,41 @@ public class UserRepository(IDatabaseContext context, IPasswordService passwordS
         sqlCommand.Parameters.AddWithValue("@DateOfBirth", request.DateOfBirth);
 
         await context.ExecuteScalarAsync(sqlCommand, cancellationToken);
+    }
+
+    public async Task<string?> Authenticate(string phoneNumber, CancellationToken cancellationToken)
+    {
+        await using var sqlCommand = new SqlCommand(UserQueries.AuthenticateUser);
+        sqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+        
+        var hashedPassword = await context.ExecuteScalarAsync(sqlCommand, cancellationToken);
+        
+        return hashedPassword?.ToString();
+    }
+
+    public async Task<UserDataResponse> GetUserData(string phoneNumber, CancellationToken cancellationToken)
+    {
+        await using var sqlCommand = new SqlCommand(UserQueries.GetUserDetails);
+        sqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+
+        await using var sqlDataReader = await context.ExecuteReaderAsync(sqlCommand, cancellationToken);
+        
+        var response = new UserDataResponse();
+
+        if (!sqlDataReader.HasRows)
+        {
+            return response;
+        }
+
+        if (!await sqlDataReader.ReadAsync(cancellationToken)) return response;
+        
+        response.UserId = sqlDataReader.GetGuid(sqlDataReader.GetOrdinal("UserId"));
+        response.Nin = sqlDataReader.GetString(sqlDataReader.GetOrdinal("NationalID"));
+        response.Email = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Email"));
+        response.PhoneNumber = sqlDataReader.GetString(sqlDataReader.GetOrdinal("PhoneNumber"));
+        response.GivenName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("GivenName"));
+        response.Surname = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Surname"));
+
+        return response;
     }
 }

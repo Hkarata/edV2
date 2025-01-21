@@ -9,23 +9,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/CreateVenueEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/FilterVenuesEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/GetVenueEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/CreateVenueRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/VenueFilterRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/PagedResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/VenueMatchesResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/VenueResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AuthenticationEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IRoleRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Application/Services/ITokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/AuthenticationRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/UserDataResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Enums/PermissionFlag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/RoleQueries.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/RoleRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Services/TokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5/storage_v2/_src_/database/eDereva.5IyjWA/schema/Core.vyMgAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5/storage_v2/_src_/database/eDereva.5IyjWA/schema/Core.vyMgAA.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AddSingleLicenseClassEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AddSingleLicenseClassEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/FilterVenuesEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/FilterVenuesEndpoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/LicenseClassRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/LicenseClassRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Registrars/ServiceRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/ServiceRegistrar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/UserQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/UserQueries.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74be176084e4dacbc4d79c592c99a3a3ad110742bffc3ba0af5540cfa7dc97/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e4a77816eac0c71b8751a88658cf7f765bd2b0f957ef1fc6f2fd3817c457ed/Endpoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -190,7 +195,10 @@
       <workItem from="1737368275012" duration="1517000" />
       <workItem from="1737370007591" duration="6866000" />
       <workItem from="1737397934062" duration="15254000" />
-      <workItem from="1737436184223" duration="6276000" />
+      <workItem from="1737436184223" duration="6514000" />
+      <workItem from="1737451485531" duration="2357000" />
+      <workItem from="1737454140877" duration="5651000" />
+      <workItem from="1737464707450" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -216,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737409476836</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Heavy Commit 2 &amp; Reformat and Code Cleanup">
+      <option name="closed" value="true" />
+      <created>1737442619549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737442619549</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +256,7 @@
     <MESSAGE value="Heavy Commit 1" />
     <MESSAGE value="Reformat and Code Cleanup" />
     <MESSAGE value="Added Logging and supplemented some logic in the endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Logging and supplemented some logic in the endpoints" />
+    <MESSAGE value="Heavy Commit 2 &amp; Reformat and Code Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Heavy Commit 2 &amp; Reformat and Code Cleanup" />
   </component>
 </project>
