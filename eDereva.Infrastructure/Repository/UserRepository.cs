@@ -13,7 +13,7 @@ public class UserRepository(IDatabaseContext context, IPasswordService passwordS
     public async Task<bool> CheckIfUserExists(string nin, string email, string phoneNumber,
         CancellationToken cancellationToken)
     {
-        var sqlCommand = new SqlCommand(UserQueries.CheckIfUserExists);
+        await using var sqlCommand = new SqlCommand(UserQueries.CheckIfUserExists);
         sqlCommand.Parameters.AddWithValue("@NationalID", nin);
         sqlCommand.Parameters.AddWithValue("@Email", email);
         sqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
@@ -25,7 +25,7 @@ public class UserRepository(IDatabaseContext context, IPasswordService passwordS
 
     public async Task CreateUser(CreateUserRequest request, CancellationToken cancellationToken)
     {
-        var sqlCommand = new SqlCommand(UserQueries.InsertUser);
+        await using var sqlCommand = new SqlCommand(UserQueries.InsertUser);
         sqlCommand.Parameters.AddWithValue("@NationalID", request.Nin);
         sqlCommand.Parameters.AddWithValue("@NationalIDType", request.NationalIDType.ToUpper());
         sqlCommand.Parameters.AddWithValue("@Email", request.Email);

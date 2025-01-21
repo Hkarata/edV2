@@ -21,7 +21,7 @@ public class LicenseClassRepository(IDatabaseContext context) : ILicenseClassRep
                            VALUES {valuePlaceholders}
                    """;
 
-        var sqlCommand = new SqlCommand(sql);
+        await using var sqlCommand = new SqlCommand(sql);
 
         // Add UserID parameter once since it's the same for all records
         sqlCommand.Parameters.AddWithValue("@UserID", userId);
@@ -38,13 +38,14 @@ public class LicenseClassRepository(IDatabaseContext context) : ILicenseClassRep
         var licenses = new List<LicenseClassInfo>();
 
         // Prepare the SQL command
-        var sqlCommand = new SqlCommand(LicenseQueries.GetUserLicenseClasses);
+        await using var sqlCommand = new SqlCommand(LicenseQueries.GetUserLicenseClasses);
         sqlCommand.Parameters.AddWithValue("@UserID", userId);
 
         // Execute the reader
-        var sqlDataReader = await context.ExecuteReaderAsync(sqlCommand, cancellationToken);
+        await using var sqlDataReader = await context.ExecuteReaderAsync(sqlCommand, cancellationToken);
 
-        if (!sqlDataReader.HasRows) return licenses; // Return an empty list if no rows are found
+        if (!sqlDataReader.HasRows)
+            return licenses; // Return an empty list if no rows are found
 
         // Iterate through the results
         while (await sqlDataReader.ReadAsync(cancellationToken))
@@ -57,12 +58,14 @@ public class LicenseClassRepository(IDatabaseContext context) : ILicenseClassRep
                     : sqlDataReader.GetString(sqlDataReader.GetOrdinal("Description"))
             });
 
+        sqlDataReader.Close();
+
         return licenses;
     }
 
     public async Task AddLicenseClassAsync(Guid userId, int licenseClassId, CancellationToken cancellationToken)
     {
-        var sqlCommand = new SqlCommand(LicenseQueries.AddSingleLicenseClass);
+        await using var sqlCommand = new SqlCommand(LicenseQueries.AddSingleLicenseClass);
         sqlCommand.Parameters.AddWithValue("@UserID", userId);
         sqlCommand.Parameters.AddWithValue("@LicenseClassID", licenseClassId);
 
@@ -71,7 +74,7 @@ public class LicenseClassRepository(IDatabaseContext context) : ILicenseClassRep
 
     public async Task RemoveLicenseClassAsync(Guid userId, int licenseClassId, CancellationToken cancellationToken)
     {
-        var sqlCommand = new SqlCommand(LicenseQueries.DeleteUserLicenseClass);
+        await using var sqlCommand = new SqlCommand(LicenseQueries.DeleteUserLicenseClass);
         sqlCommand.Parameters.AddWithValue("@UserID", userId);
         sqlCommand.Parameters.AddWithValue("@LicenseClassID", licenseClassId);
 

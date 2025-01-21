@@ -37,7 +37,7 @@ public class AddSingleLicenseClassEndpoint(
             logger.LogInformation("Successfully added license class {LicenseClassId} for user {UserId}.", req, userId);
             return TypedResults.Created();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             logger.LogWarning("License class {LicenseClassId} already exists for user {UserId}.", req, userId);
             return TypedResults.Conflict($"License class {req} is already associated with the user.");

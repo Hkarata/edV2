@@ -31,11 +31,11 @@ public class CreateUserEndpoint(IUserRepository userRepository, ILogger<CreateUs
     {
         // Log the incoming request data
         logger.LogInformation("Received request to create user with email: {Email}.", req.Email);
-        
+
         try
         {
             await userRepository.CreateUser(req, ct);
-            
+
             logger.LogUserCreated(req);
             return TypedResults.Created();
         }

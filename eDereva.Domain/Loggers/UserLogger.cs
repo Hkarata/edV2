@@ -17,7 +17,7 @@ public static partial class UserLogger
         this ILogger logger,
         [LogProperties] UserCheckRequest userCheckRequest
     );
-    
+
     [LoggerMessage(LogLevel.Information, "User created successfully")]
     public static partial void LogUserCreated(
         this ILogger logger,

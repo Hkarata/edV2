@@ -11,6 +11,8 @@ public static class RepositoryRegistrar
 
         services.AddScoped<ILicenseClassRepository, LicenseClassRepository>();
 
+        services.AddScoped<IVenueRepository, VenueRepository>();
+
         return services;
     }
 }

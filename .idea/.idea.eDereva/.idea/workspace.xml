@@ -8,7 +8,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Reformat and Code Cleanup" />
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/CreateVenueEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/FilterVenuesEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/GetVenueEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/CreateVenueRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/VenueFilterRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/PagedResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/VenueMatchesResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/VenueResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/64bd2839-1bb8-4f3c-8fcc-42a0b469b1c5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AddSingleLicenseClassEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/AddSingleLicenseClassEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/LicenseClassRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/LicenseClassRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/UserRepository.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,29 +55,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.eDereva.Api: http.executor": "Run",
-    ".NET Launch Settings Profile.eDereva.Api: https.executor": "Debug",
-    ".NET Static Method.eDereva.Domain.DataProtection.RequestParameterDecryption.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.eDereva.Api: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.eDereva.Api: https.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Static Method.eDereva.Domain.DataProtection.RequestParameterDecryption.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.eDereva.Api: https">
     <configuration name="eDereva.Domain.DataProtection.RequestParameterDecryption.Main" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
       <option name="EXE_PATH" value="C:\Program Files\JetBrains\JetBrains Rider 2024.2.6\lib\ReSharperHost\JetLauncherILc.exe" />
@@ -171,7 +189,8 @@
       <workItem from="1737362111592" duration="5500000" />
       <workItem from="1737368275012" duration="1517000" />
       <workItem from="1737370007591" duration="6866000" />
-      <workItem from="1737397934062" duration="11190000" />
+      <workItem from="1737397934062" duration="15254000" />
+      <workItem from="1737436184223" duration="6276000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -189,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737409123803</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Logging and supplemented some logic in the endpoints">
+      <option name="closed" value="true" />
+      <created>1737409476836</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737409476836</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +239,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Heavy Commit 1" />
     <MESSAGE value="Reformat and Code Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat and Code Cleanup" />
+    <MESSAGE value="Added Logging and supplemented some logic in the endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Logging and supplemented some logic in the endpoints" />
   </component>
 </project>
