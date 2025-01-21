@@ -93,6 +93,11 @@ if (app.Environment.IsDevelopment())
         options.Theme = ScalarTheme.Mars;
         options.WithPreferredScheme("Bearer");
         options.WithApiKeyAuthentication(keyOptions => { keyOptions.Token = "Token"; });
+        options.AddServer(new ScalarServer
+        (
+            "http://13.247.155.157:5282/",
+            "Dev server"
+        ));
     });
 }
 
