@@ -85,7 +85,7 @@ builder.Services.AddOpenApi(options =>
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    serverOptions.ListenAnyIP(5281); // Listen on all network interfaces
+    serverOptions.ListenAnyIP(5282); // Listen on all network interfaces
 });
 
 
