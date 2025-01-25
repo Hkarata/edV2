@@ -83,7 +83,11 @@ builder.Services.AddOpenApi(options =>
     options.AddDocumentTransformer<ApiKeySecuritySchemeTransformer>();
 });
 
-builder.WebHost.UseKestrel();
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(5282); // Listen on all network interfaces
+});
+
 
 
 var app = builder.Build();
