@@ -116,4 +116,25 @@ public static class VenueQueries
                 FROM FilteredVenues
                 WHERE RowNum BETWEEN @Offset + 1 AND @Offset + @PageSize
         """;
+
+    public static string SoftDeleteVenue =>
+        """
+                UPDATE Core.Venues 
+                SET IsDeleted = 1,
+                    ModifiedAt = GETUTCDATE()
+                WHERE Id = @VenueId
+                  AND IsDeleted = 0;
+        """;
+    
+    public static string UndoSoftDeleteVenue =>
+        """
+                UPDATE Core.Venues 
+                SET IsDeleted = 0,
+                    ModifiedAt = GETUTCDATE()
+                WHERE Id = @VenueId
+                  AND IsDeleted = 1;
+        """;
+
+    public static string DeleteVenue =>
+        "Delete FROM Core.Venues WHERE Id = @VenueId;";
 }

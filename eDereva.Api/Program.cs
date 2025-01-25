@@ -68,6 +68,14 @@ builder.Services.AddServices();
 
 builder.Services.AddRepositories();
 
+builder.Services.AddCors(options =>
+    options.AddPolicy("CorsPolicy", corsPolicyBuilder =>
+        corsPolicyBuilder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .WithExposedHeaders("X-New-Token")
+    ));
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi(options =>
 {
@@ -95,11 +103,23 @@ if (app.Environment.IsDevelopment())
         options.WithApiKeyAuthentication(keyOptions => { keyOptions.Token = "Token"; });
         options.AddServer(new ScalarServer
         (
-            "http://13.247.155.157:5282/",
+            "http://13.246.238.118:5282/",
+            "Dev server"
+        ));
+        options.AddServer(new ScalarServer
+        (
+            "http://localhost:5282/",
             "Dev server"
         ));
     });
 }
+
+app.UseCors(corsPolicyBuilder =>
+{
+    corsPolicyBuilder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+});
 
 app.UseHttpsRedirection();
 

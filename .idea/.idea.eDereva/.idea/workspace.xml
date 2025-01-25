@@ -8,7 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Server Update" />
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/DeleteVenueEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/SoftDeleteVenueEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/UndoSoftDeleteVenueEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Hkarata"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Hkarata&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Hkarata/edV2.git",
-    "accountId": "ddc17303-2a31-4134-8c29-0d13a2ce476c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hkarata/edV2.git&quot;,
+    &quot;accountId&quot;: &quot;ddc17303-2a31-4134-8c29-0d13a2ce476c&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74be176084e4dacbc4d79c592c99a3a3ad110742bffc3ba0af5540cfa7dc97/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e4a77816eac0c71b8751a88658cf7f765bd2b0f957ef1fc6f2fd3817c457ed/Endpoint.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,6 +67,7 @@
     &quot;.NET Static Method.eDereva.Domain.DataProtection.RequestParameterDecryption.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -188,7 +199,10 @@
       <workItem from="1737436184223" duration="6514000" />
       <workItem from="1737451485531" duration="2357000" />
       <workItem from="1737454140877" duration="5651000" />
-      <workItem from="1737464707450" duration="3386000" />
+      <workItem from="1737464707450" duration="4975000" />
+      <workItem from="1737542261256" duration="4996000" />
+      <workItem from="1737627103119" duration="266000" />
+      <workItem from="1737651667453" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -246,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737468506943</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Server">
+      <option name="closed" value="true" />
+      <created>1737468706627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737468706627</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +296,7 @@
     <MESSAGE value="Heavy Commit 4" />
     <MESSAGE value="Updated Conn string" />
     <MESSAGE value="Server Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server Update" />
+    <MESSAGE value="Added Server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Server" />
   </component>
 </project>

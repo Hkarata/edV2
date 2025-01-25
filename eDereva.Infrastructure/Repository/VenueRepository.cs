@@ -151,4 +151,28 @@ public class VenueRepository(IDatabaseContext context) : IVenueRepository
             HasPreviousPage = request.Page > 1
         };
     }
+
+    public async Task SoftDeleteVenueAsync(Guid venueId, CancellationToken cancellationToken)
+    {
+        await using var sqlCommand = new SqlCommand(VenueQueries.SoftDeleteVenue);
+        sqlCommand.Parameters.AddWithValue("@VenueId", venueId);
+        
+        await context.ExecuteNonQueryAsync(sqlCommand, cancellationToken);
+    }
+
+    public async Task UnSoftDeleteVenueAsync(Guid venueId, CancellationToken cancellationToken)
+    {
+        await using var sqlCommand = new SqlCommand(VenueQueries.UndoSoftDeleteVenue);
+        sqlCommand.Parameters.AddWithValue("@VenueId", venueId);
+        
+        await context.ExecuteNonQueryAsync(sqlCommand, cancellationToken);
+    }
+
+    public async Task DeleteVenueAsync(Guid venueId, CancellationToken cancellationToken)
+    {
+        await using var sqlCommand = new SqlCommand(VenueQueries.SoftDeleteVenue);
+        sqlCommand.Parameters.AddWithValue("@VenueId", venueId);
+        
+        await context.ExecuteNonQueryAsync(sqlCommand, cancellationToken);
+    }
 }
