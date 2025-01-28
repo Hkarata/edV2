@@ -9,15 +9,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/DeleteVenueEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/SoftDeleteVenueEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/UndoSoftDeleteVenueEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Sessions/GetFilteredSessionEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/User/GetUserDashboardEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/ISessionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Requests/SessionFilterRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/Contracts/Responses/SessionResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/SessionQueries.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/SessionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/Core.vyMgAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/Core.vyMgAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/Identity.3tTC-w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/Identity.3tTC-w.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/eDereva.5IyjWA/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/master.YiqNvw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/master.YiqNvw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/dataSources/da095804-d12a-4343-b93a-377ff7cb41fc/storage_v2/_src_/database/master.YiqNvw/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eDereva.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/RepositoryRegistrar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eDereva.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +98,8 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;
+      &quot;sqlserver.localdb&quot;,
+      &quot;sqlserver&quot;
     ]
   }
 }</component>
@@ -203,6 +222,11 @@
       <workItem from="1737542261256" duration="4996000" />
       <workItem from="1737627103119" duration="266000" />
       <workItem from="1737651667453" duration="618000" />
+      <workItem from="1737785569101" duration="4526000" />
+      <workItem from="1737890657034" duration="1739000" />
+      <workItem from="1737961259586" duration="4712000" />
+      <workItem from="1737988997088" duration="855000" />
+      <workItem from="1738067598666" duration="2394000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -268,7 +292,55 @@
       <option name="project" value="LOCAL" />
       <updated>1737468706627</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="heavy commit 5">
+      <option name="closed" value="true" />
+      <created>1737787141284</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737787141284</updated>
+    </task>
+    <task id="LOCAL-00010" summary="kestrel change">
+      <option name="closed" value="true" />
+      <created>1737787872441</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737787872441</updated>
+    </task>
+    <task id="LOCAL-00011" summary="kestrel 2">
+      <option name="closed" value="true" />
+      <created>1737788036162</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737788036162</updated>
+    </task>
+    <task id="LOCAL-00012" summary="kestrel 4">
+      <option name="closed" value="true" />
+      <created>1737788571108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737788571108</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Kestrel 6">
+      <option name="closed" value="true" />
+      <created>1737789094183</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1737789094184</updated>
+    </task>
+    <task id="LOCAL-00014" summary="jj3">
+      <option name="closed" value="true" />
+      <created>1737789408662</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1737789408662</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +369,24 @@
     <MESSAGE value="Updated Conn string" />
     <MESSAGE value="Server Update" />
     <MESSAGE value="Added Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Server" />
+    <MESSAGE value="heavy commit 5" />
+    <MESSAGE value="kestrel change" />
+    <MESSAGE value="kestrel 2" />
+    <MESSAGE value="kestrel 4" />
+    <MESSAGE value="Kestrel 6" />
+    <MESSAGE value="jj3" />
+    <option name="LAST_COMMIT_MESSAGE" value="jj3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+          <properties exception="Microsoft.Data.SqlClient.SqlException" isInternal="false" displayValue="SqlException" namespaceName="Microsoft.Data.SqlClient">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

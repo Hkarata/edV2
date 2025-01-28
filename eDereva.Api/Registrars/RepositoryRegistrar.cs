@@ -15,6 +15,8 @@ public static class RepositoryRegistrar
 
         services.AddScoped<IRoleRepository, RoleRepository>();
 
+        services.AddScoped<ISessionRepository, SessionRepository>();
+
         return services;
     }
 }

@@ -83,10 +83,10 @@ builder.Services.AddOpenApi(options =>
     options.AddDocumentTransformer<ApiKeySecuritySchemeTransformer>();
 });
 
-builder.WebHost.ConfigureKestrel(serverOptions =>
-{
-    serverOptions.ListenAnyIP(5282); // Listen on all network interfaces
-});
+// builder.WebHost.ConfigureKestrel(serverOptions =>
+// {
+//     serverOptions.ListenAnyIP(5282); // Listen on all network interfaces
+// });
 
 
 
@@ -102,16 +102,16 @@ if (app.Environment.IsDevelopment())
         options.Theme = ScalarTheme.Mars;
         options.WithPreferredScheme("Bearer");
         options.WithApiKeyAuthentication(keyOptions => { keyOptions.Token = "Token"; });
-        options.AddServer(new ScalarServer
-        (
-            "http://13.246.238.118:5282/",
-            "Dev server"
-        ));
-        options.AddServer(new ScalarServer
-        (
-            "http://localhost:5282/",
-            "Dev server"
-        ));
+        // options.AddServer(new ScalarServer
+        // (
+        //     "http://13.246.238.118:5282/",
+        //     "Dev server"
+        // ));
+        // options.AddServer(new ScalarServer
+        // (
+        //     "http://localhost:5282/",
+        //     "Dev server"
+        // ));
     });
 }
 

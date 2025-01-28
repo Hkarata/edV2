@@ -27,7 +27,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="@13.247.155.157" uuid="da095804-d12a-4343-b93a-377ff7cb41fc">
+    <data-source name="@13.246.238.118" uuid="3a5f50af-2730-4e32-82b7-0e7d7a53c622">
       <database-info product="Microsoft SQL Server" version="16.00.4175" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.4175" exact-driver-version="1.0">
         <extra-name-characters>$#@</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -44,12 +44,11 @@
             <node kind="database" qname="eDereva">
               <node kind="schema">
                 <name qname="Core" />
+                <name qname="Locale" />
                 <name qname="Identity" />
                 <name qname="Audit" />
-                <name qname="Locale" />
               </node>
             </node>
-            <node kind="database" qname="master" />
           </node>
         </introspection-scope>
       </schema-mapping>
