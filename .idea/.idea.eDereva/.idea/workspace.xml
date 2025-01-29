@@ -8,17 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eDereva.Api/Registrars/JobRegistrars.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Application/Jobs/ISessionSeederJob.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Jobs/SessionSeederJob.cs" afterDir="false" />
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Added Seeding Session Job functionality for the whole year">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/CreateVenueEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Endpoints/Venue/CreateVenueEndpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/eDereva.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/eDereva.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Application/Repositories/IVenueRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Domain/SQL Queries/VenueQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Repository/VenueRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Jobs/SessionSeederJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Jobs/SessionSeederJob.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +202,7 @@
       <workItem from="1737961259586" duration="4712000" />
       <workItem from="1737988997088" duration="855000" />
       <workItem from="1738067598666" duration="2490000" />
-      <workItem from="1738126565435" duration="2488000" />
+      <workItem from="1738126565435" duration="3667000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -332,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738071473803</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added Seeding Session Job functionality for the whole year">
+      <option name="closed" value="true" />
+      <created>1738129337279</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738129337279</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +368,8 @@
     <MESSAGE value="Kestrel 6" />
     <MESSAGE value="jj3" />
     <MESSAGE value="Fixed Getting Filtered Sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Getting Filtered Sessions" />
+    <MESSAGE value="Added Seeding Session Job functionality for the whole year" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Seeding Session Job functionality for the whole year" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

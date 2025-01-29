@@ -13,6 +13,10 @@ public static class ServiceRegistrar
 
         services.AddSingleton<ITokenService, TokenService>();
 
+        services.AddScoped<IOtpService, OtpService>();
+
+        services.AddScoped<ISmsService, SmsService>();
+
         return services;
     }
 }

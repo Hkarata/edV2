@@ -4,6 +4,7 @@ using eDereva.Api.Extensions;
 using eDereva.Api.Registrars;
 using eDereva.Application.Context;
 using eDereva.Domain.DataProtection;
+using eDereva.Domain.ValueObjects;
 using FastEndpoints;
 using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -64,6 +65,7 @@ builder.Services.AddRedaction(options =>
     }, new DataClassificationSet(DataTaxonomy.PiiData));
 });
 
+builder.Services.Configure<SmsConfiguration>(configuration.GetSection("SmsService"));
 
 builder.Services.AddServices();
 

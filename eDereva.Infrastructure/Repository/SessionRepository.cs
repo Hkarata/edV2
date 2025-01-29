@@ -15,7 +15,7 @@ public class SessionRepository(IDatabaseContext context) : ISessionRepository
         await using var sqlCommand = new SqlCommand(SessionQueries.GetFilteredSessions);
 
         // Add parameters with null handling
-        sqlCommand.Parameters.AddWithValue("@VenueId", (object)request.VenueId ?? DBNull.Value);
+        sqlCommand.Parameters.AddWithValue("@VenueId", (object)request.VenueId! ?? DBNull.Value);
         sqlCommand.Parameters.AddWithValue("@RegionId", (object)request.RegionId ?? DBNull.Value);
         sqlCommand.Parameters.AddWithValue("@DistrictId", (object)request.DistrictId ?? DBNull.Value);
         sqlCommand.Parameters.AddWithValue("@DateFrom", (object)request.DateFrom ?? DBNull.Value);
