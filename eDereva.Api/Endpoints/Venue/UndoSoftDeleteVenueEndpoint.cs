@@ -1,6 +1,5 @@
 using eDereva.Application.Repositories;
 using FastEndpoints;
-using Microsoft.Extensions.Logging;
 
 namespace eDereva.Api.Endpoints.Venue;
 
@@ -26,7 +25,7 @@ public class UndoSoftDeleteVenueEndpoint(IVenueRepository venueRepository, ILogg
         try
         {
             logger.LogInformation("Starting undo soft delete for venue with ID: {VenueId}", venueId);
-            
+
             await venueRepository.UnSoftDeleteVenueAsync(venueId, ct);
 
             logger.LogInformation("Successfully undid soft deleted venue with ID: {VenueId}", venueId);

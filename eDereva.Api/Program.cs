@@ -5,6 +5,7 @@ using eDereva.Api.Registrars;
 using eDereva.Application.Context;
 using eDereva.Domain.DataProtection;
 using FastEndpoints;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Compliance.Classification;
 using Microsoft.Extensions.Compliance.Redaction;
@@ -68,6 +69,18 @@ builder.Services.AddServices();
 
 builder.Services.AddRepositories();
 
+builder.Services.AddJobs();
+
+builder.Services.AddHangfire(config =>
+    config.SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+        .UseSimpleAssemblyNameTypeSerializer()
+        .UseRecommendedSerializerSettings()
+        .UseSqlServerStorage(configuration.GetConnectionString("AppDbConnection"))
+        .UseDashboardMetrics()
+);
+
+builder.Services.AddHangfireServer(options => { options.SchedulePollingInterval = TimeSpan.FromSeconds(15); });
+
 builder.Services.AddCors(options =>
     options.AddPolicy("CorsPolicy", corsPolicyBuilder =>
         corsPolicyBuilder.AllowAnyOrigin()
@@ -87,7 +100,6 @@ builder.Services.AddOpenApi(options =>
 // {
 //     serverOptions.ListenAnyIP(5282); // Listen on all network interfaces
 // });
-
 
 
 var app = builder.Build();
@@ -131,5 +143,7 @@ app.UseFastEndpoints(options =>
     options.Versioning.DefaultVersion = 1;
     options.Versioning.PrependToRoute = true;
 });
+
+app.UseHangfireDashboard();
 
 app.Run();

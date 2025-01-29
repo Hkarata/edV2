@@ -25,7 +25,7 @@ public class DeleteVenueEndpoint(IVenueRepository venueRepository, ILogger<Delet
         try
         {
             logger.LogInformation("Starting delete for venue with ID: {VenueId}", venueId);
-            
+
             await venueRepository.DeleteVenueAsync(venueId, ct);
 
             logger.LogInformation("Successfully deleted venue with ID: {VenueId}", venueId);

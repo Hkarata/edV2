@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.User;
 
-public class AuthenticationEndpoint (IUserRepository userRepository, IPasswordService passwordService, 
-    ITokenService tokenService, IRoleRepository roleRepository)
+public class AuthenticationEndpoint(
+    IUserRepository userRepository,
+    IPasswordService passwordService,
+    ITokenService tokenService,
+    IRoleRepository roleRepository)
     : Endpoint<AuthenticationRequest, Results<Ok<string>, UnauthorizedHttpResult>>
 {
     public override void Configure()
@@ -23,30 +26,25 @@ public class AuthenticationEndpoint (IUserRepository userRepository, IPasswordSe
         });
     }
 
-    public override async Task<Results<Ok<string>, UnauthorizedHttpResult>> ExecuteAsync(AuthenticationRequest req, CancellationToken ct)
+    public override async Task<Results<Ok<string>, UnauthorizedHttpResult>> ExecuteAsync(AuthenticationRequest req,
+        CancellationToken ct)
     {
         var unHashedClientPassword = RequestParameterDecryption.DecryptData(req.ClientHashedPassword);
-        
+
         var hashedPassword = await userRepository.Authenticate(req.PhoneNumber, ct);
 
-        if (string.IsNullOrEmpty(hashedPassword))
-        {
-            return TypedResults.Unauthorized();
-        }
-        
+        if (string.IsNullOrEmpty(hashedPassword)) return TypedResults.Unauthorized();
+
         var result = passwordService.VerifyHashedPassword(hashedPassword, unHashedClientPassword);
 
-        if (!result)
-        {
-            return TypedResults.Unauthorized();
-        }
+        if (!result) return TypedResults.Unauthorized();
 
         var userData = await userRepository.GetUserData(req.PhoneNumber, ct);
 
         var basicFlag = await roleRepository.GetBasicRolePermissionFlag(ct);
-        
+
         var accessToken = tokenService.GenerateToken(userData, basicFlag);
-        
+
         return TypedResults.Ok(accessToken);
     }
 }

@@ -8,7 +8,7 @@ public interface ITokenService
 {
     string GenerateToken(UserDataResponse userData,
         PermissionFlag permissions);
-    
+
     bool IsTokenCloseToExpiring(JwtSecurityToken? token);
 
     string RefreshToken(UserDataResponse userData,

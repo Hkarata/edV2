@@ -156,7 +156,7 @@ public class VenueRepository(IDatabaseContext context) : IVenueRepository
     {
         await using var sqlCommand = new SqlCommand(VenueQueries.SoftDeleteVenue);
         sqlCommand.Parameters.AddWithValue("@VenueId", venueId);
-        
+
         await context.ExecuteNonQueryAsync(sqlCommand, cancellationToken);
     }
 
@@ -164,7 +164,7 @@ public class VenueRepository(IDatabaseContext context) : IVenueRepository
     {
         await using var sqlCommand = new SqlCommand(VenueQueries.UndoSoftDeleteVenue);
         sqlCommand.Parameters.AddWithValue("@VenueId", venueId);
-        
+
         await context.ExecuteNonQueryAsync(sqlCommand, cancellationToken);
     }
 
@@ -172,7 +172,17 @@ public class VenueRepository(IDatabaseContext context) : IVenueRepository
     {
         await using var sqlCommand = new SqlCommand(VenueQueries.SoftDeleteVenue);
         sqlCommand.Parameters.AddWithValue("@VenueId", venueId);
-        
+
         await context.ExecuteNonQueryAsync(sqlCommand, cancellationToken);
+    }
+
+    public async Task<Guid> GetVenueIdByVenueNameAsync(string venueName, CancellationToken cancellationToken)
+    {
+        await using var sqlCommand = new SqlCommand(VenueQueries.GetVenueId);
+        sqlCommand.Parameters.AddWithValue("@VenueName", venueName);
+
+        var result = await context.ExecuteScalarAsync(sqlCommand, cancellationToken);
+
+        return result is Guid guid ? guid : Guid.Empty;
     }
 }

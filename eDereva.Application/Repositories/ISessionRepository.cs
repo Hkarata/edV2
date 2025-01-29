@@ -5,5 +5,6 @@ namespace eDereva.Application.Repositories;
 
 public interface ISessionRepository
 {
-    Task<PagedResponse<SessionResponse>> GetFilteredSessionsAsync(SessionFilterRequest request, CancellationToken cancellationToken);
+    Task<PagedResponse<SessionResponse>> GetFilteredSessionsAsync(SessionFilterRequest request,
+        CancellationToken cancellationToken);
 }

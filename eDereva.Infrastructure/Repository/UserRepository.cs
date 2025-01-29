@@ -45,9 +45,9 @@ public class UserRepository(IDatabaseContext context, IPasswordService passwordS
     {
         await using var sqlCommand = new SqlCommand(UserQueries.AuthenticateUser);
         sqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-        
+
         var hashedPassword = await context.ExecuteScalarAsync(sqlCommand, cancellationToken);
-        
+
         return hashedPassword?.ToString();
     }
 
@@ -57,16 +57,13 @@ public class UserRepository(IDatabaseContext context, IPasswordService passwordS
         sqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
 
         await using var sqlDataReader = await context.ExecuteReaderAsync(sqlCommand, cancellationToken);
-        
+
         var response = new UserDataResponse();
 
-        if (!sqlDataReader.HasRows)
-        {
-            return response;
-        }
+        if (!sqlDataReader.HasRows) return response;
 
         if (!await sqlDataReader.ReadAsync(cancellationToken)) return response;
-        
+
         response.UserId = sqlDataReader.GetGuid(sqlDataReader.GetOrdinal("UserId"));
         response.Nin = sqlDataReader.GetString(sqlDataReader.GetOrdinal("NationalID"));
         response.Email = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Email"));

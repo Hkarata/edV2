@@ -21,7 +21,7 @@ public class TokenService(IConfiguration configuration) : ITokenService
     private readonly string _secretKey = configuration["Jwt:SecretKey"] ??
                                          throw new ArgumentNullException(nameof(configuration),
                                              "SecretKey cannot be null");
-    
+
     public string GenerateToken(UserDataResponse userData, PermissionFlag permissions)
     {
         if (string.IsNullOrEmpty(userData.Nin))
@@ -32,7 +32,7 @@ public class TokenService(IConfiguration configuration) : ITokenService
 
         var claims = new List<Claim>
         {
-            new Claim("UserID", userData.UserId.ToString()),
+            new("UserID", userData.UserId.ToString()),
             new(ClaimTypes.Sid, userData.Nin),
             new(ClaimTypes.GivenName, userData.GivenName),
             new(ClaimTypes.Surname, userData.Surname),
@@ -73,7 +73,7 @@ public class TokenService(IConfiguration configuration) : ITokenService
 
         var claims = new List<Claim>
         {
-            new Claim("UserID", userData.UserId.ToString()),
+            new("UserID", userData.UserId.ToString()),
             new(ClaimTypes.Sid, userData.Nin),
             new(ClaimTypes.GivenName, userData.GivenName),
             new(ClaimTypes.Surname, userData.Surname),

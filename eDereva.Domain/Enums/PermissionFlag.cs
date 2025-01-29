@@ -1,6 +1,5 @@
 namespace eDereva.Domain.Enums;
 
-
 [Flags]
 public enum PermissionFlag
 {

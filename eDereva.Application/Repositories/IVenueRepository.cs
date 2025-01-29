@@ -17,10 +17,12 @@ public interface IVenueRepository
     Task<PagedResponse<VenueResponse>> GetFilteredVenuesAsync(
         VenueFilterRequest request,
         CancellationToken cancellationToken);
-    
+
     Task SoftDeleteVenueAsync(Guid venueId, CancellationToken cancellationToken);
-    
+
     Task UnSoftDeleteVenueAsync(Guid venueId, CancellationToken cancellationToken);
-    
+
     Task DeleteVenueAsync(Guid venueId, CancellationToken cancellationToken);
+
+    Task<Guid> GetVenueIdByVenueNameAsync(string venueName, CancellationToken cancellationToken);
 }

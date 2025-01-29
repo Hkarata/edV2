@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.Sessions;
 
-public class GetFilteredSessionEndpoint (ISessionRepository sessionRepository, ILogger<GetFilteredSessionEndpoint> logger)
-    : Endpoint<SessionFilterRequest, Results<Ok<PagedResponse<SessionResponse>>, Conflict<string>,NoContent>>
+public class GetFilteredSessionEndpoint(
+    ISessionRepository sessionRepository,
+    ILogger<GetFilteredSessionEndpoint> logger)
+    : Endpoint<SessionFilterRequest, Results<Ok<PagedResponse<SessionResponse>>, Conflict<string>, NoContent>>
 {
     public override void Configure()
     {
@@ -21,20 +23,16 @@ public class GetFilteredSessionEndpoint (ISessionRepository sessionRepository, I
         });
     }
 
-    public override async Task<Results<Ok<PagedResponse<SessionResponse>>, Conflict<string>, NoContent>> ExecuteAsync(SessionFilterRequest req, CancellationToken ct)
+    public override async Task<Results<Ok<PagedResponse<SessionResponse>>, Conflict<string>, NoContent>> ExecuteAsync(
+        SessionFilterRequest req, CancellationToken ct)
     {
         if (req.RegionId == Guid.Empty || req.DistrictId == Guid.Empty || req.DateFrom == default)
-        {
             return TypedResults.Conflict("RegionId, DistrictId, and DateFrom must be provided.");
-        }
 
         var sessions = await sessionRepository.GetFilteredSessionsAsync(req, ct);
 
-        if (sessions.Items.Count == 0)
-        {
-            return TypedResults.NoContent();
-        }
-        
+        if (sessions.Items.Count == 0) return TypedResults.NoContent();
+
         return TypedResults.Ok(sessions);
     }
 }

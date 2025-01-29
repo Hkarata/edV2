@@ -125,7 +125,7 @@ public static class VenueQueries
                 WHERE Id = @VenueId
                   AND IsDeleted = 0;
         """;
-    
+
     public static string UndoSoftDeleteVenue =>
         """
                 UPDATE Core.Venues 
@@ -137,4 +137,7 @@ public static class VenueQueries
 
     public static string DeleteVenue =>
         "Delete FROM Core.Venues WHERE Id = @VenueId;";
+
+    public static string GetVenueId =>
+        "SELECT v.Id AS VenueId FROM Core.Venues v WHERE LOWER(Name) = LOWER(@VenueName);";
 }

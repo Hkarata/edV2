@@ -1,12 +1,17 @@
+using eDereva.Application.Jobs;
 using eDereva.Application.Repositories;
 using eDereva.Domain.Contracts.Requests;
 using eDereva.Domain.Contracts.Responses;
 using FastEndpoints;
+using Hangfire;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace eDereva.Api.Endpoints.Venue;
 
-public class CreateVenueEndpoint(IVenueRepository venuesRepository, ILogger<CreateVenueEndpoint> logger)
+public class CreateVenueEndpoint(
+    IVenueRepository venuesRepository,
+    IBackgroundJobClientV2 jobClientV2,
+    ILogger<CreateVenueEndpoint> logger)
     : Endpoint<CreateVenueRequest, Results<Created, Conflict<string>, Conflict<List<VenueMatchesResponse>>>>
 {
     public override void Configure()
@@ -59,5 +64,18 @@ public class CreateVenueEndpoint(IVenueRepository venuesRepository, ILogger<Crea
                 req.DistrictId);
             return TypedResults.Conflict(ex.Message);
         }
+    }
+
+    public override async Task OnAfterHandleAsync
+    (CreateVenueRequest req, Results<Created, Conflict<string>, Conflict<List<VenueMatchesResponse>>> res,
+        CancellationToken ct)
+    {
+        if (HttpContext.Response.StatusCode != 201)
+            return;
+
+        var venueId = await venuesRepository.GetVenueIdByVenueNameAsync(req.Name, ct);
+
+        _ = jobClientV2.Enqueue<ISessionSeederJob>(
+            job => job.SeedSessionsAsync(venueId, ct));
     }
 }

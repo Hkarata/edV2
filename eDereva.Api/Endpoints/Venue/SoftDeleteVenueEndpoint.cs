@@ -26,7 +26,7 @@ public class SoftDeleteVenueEndpoint(IVenueRepository venueRepository, ILogger<S
         try
         {
             logger.LogInformation("Starting soft delete for venue with ID: {VenueId}", venueId);
-            
+
             await venueRepository.SoftDeleteVenueAsync(venueId, ct);
 
             logger.LogInformation("Successfully soft deleted venue with ID: {VenueId}", venueId);
