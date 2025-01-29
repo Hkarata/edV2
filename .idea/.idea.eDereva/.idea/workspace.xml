@@ -8,9 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Added Seeding Session Job functionality for the whole year">
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Sms Major commit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Infrastructure/Jobs/SessionSeederJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Infrastructure/Jobs/SessionSeederJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74be176084e4dacbc4d79c592c99a3a3ad110742bffc3ba0af5540cfa7dc97/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e4a77816eac0c71b8751a88658cf7f765bd2b0f957ef1fc6f2fd3817c457ed/Endpoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -202,7 +204,7 @@
       <workItem from="1737961259586" duration="4712000" />
       <workItem from="1737988997088" duration="855000" />
       <workItem from="1738067598666" duration="2490000" />
-      <workItem from="1738126565435" duration="3667000" />
+      <workItem from="1738126565435" duration="7267000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -332,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738129337279</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Sms Major commit">
+      <option name="closed" value="true" />
+      <created>1738133808340</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738133808340</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +379,8 @@
     <MESSAGE value="jj3" />
     <MESSAGE value="Fixed Getting Filtered Sessions" />
     <MESSAGE value="Added Seeding Session Job functionality for the whole year" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Seeding Session Job functionality for the whole year" />
+    <MESSAGE value="Sms Major commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sms Major commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
