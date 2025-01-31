@@ -39,7 +39,8 @@ public class RequestOtpEndpoint(IOtpService otpService, ISmsService smsService)
         if (string.IsNullOrEmpty(otp))
             return TypedResults.BadRequest();
 
-        var phone = 255 + phoneNumber.TrimStart('0');
+        var phone = phoneNumber.StartsWith("0") ? "255" + phoneNumber.Substring(1) : "255" + phoneNumber;
+
 
         var sms = new Sms
         {
