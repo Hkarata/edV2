@@ -8,11 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="Sms Major commit">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eDereva/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/eDereva.sln.DotSettings.user" afterDir="false" />
-    </list>
+    <list default="true" id="d7fb20d0-6ff2-4107-8ded-083a7dd5b345" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,7 +200,7 @@
       <workItem from="1737961259586" duration="4712000" />
       <workItem from="1737988997088" duration="855000" />
       <workItem from="1738067598666" duration="2490000" />
-      <workItem from="1738126565435" duration="7267000" />
+      <workItem from="1738126565435" duration="7786000" />
     </task>
     <task id="LOCAL-00001" summary="Heavy Commit 1">
       <option name="closed" value="true" />
@@ -342,7 +338,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738133808340</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Prod Settings">
+      <option name="closed" value="true" />
+      <created>1738133992790</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738133992790</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +384,8 @@
     <MESSAGE value="Fixed Getting Filtered Sessions" />
     <MESSAGE value="Added Seeding Session Job functionality for the whole year" />
     <MESSAGE value="Sms Major commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sms Major commit" />
+    <MESSAGE value="Prod Settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prod Settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
